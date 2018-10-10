@@ -1,0 +1,4 @@
+github sync works if uploaded
+uesd the following to make it work:
+
+git remote add origin2 https://github.com/vasasav/TORH_GIT.git

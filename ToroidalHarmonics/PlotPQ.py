@@ -1,9 +1,9 @@
 from DTORH import DTORH
 import numpy as np
-import pylab as pl 
+import pylab as pl
 
 # prep z
-zVec=np.linspace(1.000001, 10, 500, dtype=np.double)
+zVec=np.linspace(1.1, 10, 500, dtype=np.double)
 
 # get the data
 mode=0
@@ -16,8 +16,8 @@ pl.figure(1)
 pl.plot(zVec, plVec, label=('P m=%d, n=%d' % (m,n)))
 pl.plot(zVec, qlVec, label=('Q m=%d, n=%d' % (m,n)))
 
-m=0
-n=1
+m=3
+n=5
 with DTORH() as dtorh: (plVec, qlVec) = dtorh.FixedM(zVec, m, n, mode)
 pl.plot(zVec, plVec, label=('P m=%d, n=%d' % (m,n)))
 pl.plot(zVec, qlVec, label=('Q m=%d, n=%d' % (m,n)))

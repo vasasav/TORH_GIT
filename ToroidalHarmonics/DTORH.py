@@ -76,3 +76,5 @@ class DTORH:
             iZ=iZ+1
 
         return (plVec, qlVec)
+
+    !!!!!!!!!!!!! need code to extract NM matrices for P, and Q

@@ -13,7 +13,7 @@ class DTORH:
     # keep it simple for now, the DLL must be in the same folder
     #gets called by __enter__ amongst other things
     def __init__(self):
-        self.dllTorHarm = ct.CDLL('wrapDTORH.dll')
+        self.dllTorHarm = ct.CDLL('wrapDTORH64.dll')
 
     def __enter__(self):# with statement
         return self
@@ -77,4 +77,4 @@ class DTORH:
 
         return (plVec, qlVec)
 
-    !!!!!!!!!!!!! need code to extract NM matrices for P, and Q
+#    !!!!!!!!!!!!! need code to extract NM matrices for P, and Q

@@ -7,7 +7,7 @@ import ctypes as ct
 import numpy as np
 
 ############ load dll
-dllTorHarm = ct.CDLL('wrapDTORH.dll')
+dllTorHarm = ct.CDLL('wrapDTORH64.dll')
 
 ############ prep data
 nDim = 301 # fortran will access inidces 0...nMax, so nMax+1 elements

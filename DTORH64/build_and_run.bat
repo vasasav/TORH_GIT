@@ -1,5 +1,6 @@
 :: clean up
 del wrapDTORH.dll
+del wrapDTORH64.dll
 del test.exe
 :: compile wrapper
 gfortran -c -g -O0 dtorh1_mod0.f &&^
@@ -23,9 +24,9 @@ gcc dtorh1_mod0.o dtorh1_mod1.o dtorh1_mod2.o ^
 	dtorh3_mod0.o dtorh3_mod1.o dtorh3_mod2.o ^
 	rout_mod.o ^
 	wrapDTORH1.o wrapDTORH2.o wrapDTORH3.o ^
-	-g -llapack -lblas -lgfortran -shared -o wrapDTORH.dll
+	-g -llapack -lblas -lgfortran -shared -o wrapDTORH64.dll
 :: compile c tester
-gcc test.c wrapDTORH.dll -g -o test.exe
+gcc test.c wrapDTORH64.dll -g -o test.exe
 :: launch c tester
 test.exe
 pause

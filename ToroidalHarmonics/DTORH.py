@@ -6,7 +6,8 @@ import numpy as np
 
 class DTORH:
     class NewNTooSmall(Exception): pass# new N is too small in dtorh1
-    class Internal(Exception): pass  # new N is too small in dtorh1
+    class NewMTooSmall(Exception): pass  # new M is too small in dtorh1
+    class Internal(Exception): pass  # uknown error
 
     dllTorHarm = None
 
@@ -77,4 +78,52 @@ class DTORH:
 
         return (plVec, qlVec)
 
-#    !!!!!!!!!!!!! need code to extract NM matrices for P, and Q
+    # get a cube of values with first dimension for n indices
+    # second for m indices
+    # third for zRange values
+    # nCount means I will consider indices n=0...(nCount-1)
+    def GetCubeNMZ(self, nCount, mCount, zRange, mode=0):
+        # allocate memory
+        PCube = np.zeros( (nCount, mCount, len(zRange)), dtype=np.double )
+        QCube = np.zeros( (nCount, mCount, len(zRange)), dtype=np.double )
+
+        # allocate memory for each run
+
+        mMax = mCount - 1 # fortran goes 0...max inclusive
+        nMax = nCount - 1
+
+        c_newM = ct.c_int(0)
+        c_newN = ct.c_int(0)
+        c_errCode = ct.c_int(0)
+
+        qVec = -1.2*np.ones((nCount+1) * (mCount+1), dtype=np.double)# I get seg-faults if I don't provide one extra element of
+        # memory
+        pVec = -1.2*np.ones((nCount+1) * (mCount+1), dtype=np.double)
+
+        # compute for each z-value
+        for iZ in range(len(zRange)):
+            self.dllTorHarm.wrapDTORH3(      (ct.c_double)(zRange[iZ]),
+                                              (ct.c_int)(mCount),
+                                              (ct.c_int)(nCount),
+                                              (ct.c_int)(mMax),
+                                              (ct.c_int)(nMax),
+                                              pVec.ctypes.data_as(ct.POINTER(ct.c_double)),
+                                              qVec.ctypes.data_as(ct.POINTER(ct.c_double)),
+                                              ct.pointer(c_newM),
+                                              ct.pointer(c_newN),
+                                              ct.pointer(c_errCode), ct.c_int(mode))
+
+            if c_newN.value<nMax:
+                raise DTORH.NewNTooSmall('FixedM: New N is smaller than the target!')
+
+            if c_newM.value<mMax:
+                raise DTORH.NewMTooSmall('FixedM: New M is smaller than the target!')
+
+            self.__HandleErrorCode(c_errCode.value)# handle errors
+
+            # tested this by computing data in matrix and one-by-one: this is the correct way to get out data.
+            PCube[:, :, iZ] = pVec.reshape((nCount+1, mCount+1))[0:-1, 0:-1]  # now it is [N,M] array
+            QCube[:, :, iZ] = qVec.reshape((nCount+1, mCount+1))[0:-1, 0:-1]  # now it is [N,M] array
+
+        return (PCube, QCube)
+

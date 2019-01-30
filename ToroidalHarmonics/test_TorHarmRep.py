@@ -13,7 +13,7 @@ class TestTorHarmRep(unittest.TestCase):
         self.thetaCounts = 9
         self.phiCounts = 15
         self.etaRange = np.array((1.5, 2.0, 2.5), dtype=np.float)
-        #
+        #from
         self.torCoordRep=np.zeros( (self.thetaCounts, self.phiCounts, len(self.etaRange) ), dtype=np.complex)
 
         # numerical precision for tests

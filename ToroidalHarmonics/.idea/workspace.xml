@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eb49b70-e063-4fa9-bb28-a6114fe41678" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ToroCoords.py" beforeDir="false" afterPath="$PROJECT_DIR$/ToroCoords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testToroCoords.py" beforeDir="false" afterPath="$PROJECT_DIR$/testToroCoords.py" afterDir="false" />
-    </list>
+    <list default="true" id="7eb49b70-e063-4fa9-bb28-a6114fe41678" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,23 +18,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="78" />
-          <entry key="py" value="2369" />
+          <entry key="py" value="3088" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2447" />
+          <entry key="Python" value="3166" />
         </counts>
       </usages-collector>
     </session>
@@ -60,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/DTORH.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="16" column="8" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
+              <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
               <folding>
                 <element signature="e#113#132#0" expanded="true" />
               </folding>
@@ -80,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TorHarmRep.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="42" column="87" selection-start-line="22" selection-start-column="8" selection-end-line="42" selection-end-column="87" />
+              <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
                 <element signature="e#394#412#0" expanded="true" />
               </folding>
@@ -92,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ToroCoords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="113" column="70" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
+            <state relative-caret-position="496">
+              <caret line="108" column="72" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
               <folding>
                 <element signature="e#498#1030#0" />
                 <element signature="e#363#420#0" />
@@ -107,6 +104,7 @@
                 <element signature="e#3503#3760#0" />
                 <element signature="e#3903#4180#0" />
                 <element signature="e#4369#4666#0" />
+                <element signature="e#4839#5139#0" />
                 <marker date="1549365698528" expanded="true" signature="497:966" ph="..." />
               </folding>
             </state>
@@ -116,10 +114,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testToroCoords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#60#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TensorPlay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding>
+                <element signature="e#80#98#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,14 +155,15 @@
         <option value="$PROJECT_DIR$/../../Filter/Filter6.py" />
         <option value="$PROJECT_DIR$/redo_testpro.py" />
         <option value="$PROJECT_DIR$/PlotPQ.py" />
-        <option value="$PROJECT_DIR$/DTORH.py" />
         <option value="$PROJECT_DIR$/TorHarmRep.py" />
         <option value="$PROJECT_DIR$/test_TorHarmRep.py" />
         <option value="$PROJECT_DIR$/DemoTorHarmRep.py" />
         <option value="$PROJECT_DIR$/MathematicaPlay.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/testToroCoords.py" />
-        <option value="$PROJECT_DIR$/testToroCoords.py" />
         <option value="$PROJECT_DIR$/ToroCoords.py" />
+        <option value="$PROJECT_DIR$/testToroCoords.py" />
+        <option value="$PROJECT_DIR$/TensorPlay.py" />
+        <option value="$PROJECT_DIR$/DTORH.py" />
       </list>
     </option>
   </component>
@@ -220,28 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testToroCoords (1)">
-    <configuration name="DemoTorHarmRep" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ToroidalHarmonics" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DemoTorHarmRep.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.TensorPlay">
     <configuration name="MathematicaPlay" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ToroidalHarmonics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,6 +266,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlotPQ.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TensorPlay" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ToroidalHarmonics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TensorPlay.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -328,18 +339,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.PlotPQ" />
-      <item itemvalue="Python.DemoTorHarmRep" />
       <item itemvalue="Python.MathematicaPlay" />
       <item itemvalue="Python.testToroCoords" />
       <item itemvalue="Python.testToroCoords (1)" />
+      <item itemvalue="Python.TensorPlay" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TensorPlay" />
         <item itemvalue="Python.testToroCoords (1)" />
         <item itemvalue="Python.testToroCoords" />
         <item itemvalue="Python.MathematicaPlay" />
         <item itemvalue="Python.PlotPQ" />
-        <item itemvalue="Python.DemoTorHarmRep" />
       </list>
     </recent_temporary>
   </component>
@@ -392,12 +403,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12434141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12434141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="-2075" y="74" width="1892" height="994" id="Run" order="2" visible="true" weight="0.24728851" />
+      <window_info anchor="bottom" x="-1920" y="0" width="1920" height="1040" id="Run" order="2" type="FLOATING" visible="true" weight="0.24728851" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44793928" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -599,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DTORH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="16" column="8" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#113#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redo_testpro.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1244">
@@ -636,30 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TorHarmRep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="42" column="87" selection-start-line="22" selection-start-column="8" selection-end-line="42" selection-end-column="87" />
-          <folding>
-            <element signature="e#394#412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testToroCoords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="e#60#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ToroCoords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="113" column="70" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
+        <state relative-caret-position="496">
+          <caret line="108" column="72" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
           <folding>
             <element signature="e#498#1030#0" />
             <element signature="e#363#420#0" />
@@ -670,7 +651,48 @@
             <element signature="e#3503#3760#0" />
             <element signature="e#3903#4180#0" />
             <element signature="e#4369#4666#0" />
+            <element signature="e#4839#5139#0" />
             <marker date="1549365698528" expanded="true" signature="497:966" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testToroCoords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#60#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorPlay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#80#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DTORH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
+          <folding>
+            <element signature="e#113#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TorHarmRep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#394#412#0" expanded="true" />
           </folding>
         </state>
       </provider>

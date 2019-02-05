@@ -40,7 +40,8 @@ class ToroCoords:
 
     # convert cartesian coordinates to toroidal coordinates
     # accept xVals, yVals, zVals of any shape as long as it is the same shape
-    def Cart_to_Toro(self, xVals, yVals, zVals):
+    # tiny = small number used for FP calculations
+    def Cart_to_Toro(self, xVals, yVals, zVals, tiny=1e-12):
         ########## check sanity of the inputs
         ToroCoords.__check_valid_coords(xVals, yVals, zVals)
 
@@ -48,7 +49,15 @@ class ToroCoords:
         # Moon & Spences p 112
         #{\[CapitalEta], \[CapitalTheta], \[CapitalPhi]} = FullSimplify[CoordinateTransform[ "Cartesian" -> "Toroidal", {X, Y, Z}]](**)
         # and
-        etaVals = np.arctanh( (2 * self.aParam * np.sqrt(xVals**2 + yVals**2))/(xVals**2 + yVals**2 + zVals**2 + self.aParam**2) )
+
+        # it is possible that we will get results for tanh=1, in which case eta=inf. Lets handle this gracefully
+        tanhEtaVals = (2 * self.aParam * np.sqrt(xVals**2 + yVals**2))/(xVals**2 + yVals**2 + zVals**2 + self.aParam**2)
+        badInds =  np.where( (1.0-np.abs(tanhEtaVals)) < tiny )
+        tanhEtaVals[badInds] = 0.0
+
+        etaVals = np.arctanh( tanhEtaVals )
+        etaVals[badInds] = np.nan
+
         #
         phiVals = np.arctan2(yVals, xVals)
 
@@ -113,4 +122,12 @@ class ToroCoords:
                 2*(self.aParam ** 2) *
                 np.sinh(etaVals)*( np.cosh(etaVals) + np.cos(thetaVals) )*np.sin(thetaVals) /
                 (np.cosh(etaVals) - np.cos(thetaVals)) ** 3
+        )
+
+    # square root of the metric - the jacobian determinant
+    def sqrt_metric(self, etaVals, thetaVals, phiVals, doCheck=True):
+        if doCheck: ToroCoords.__check_valid_coords(etaVals, thetaVals, phiVals)
+
+        return (
+                (self.aParam ** 3) * np.sinh(etaVals) / (np.cosh(etaVals) - np.cos(thetaVals)) ** 3
         )

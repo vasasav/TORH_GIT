@@ -125,5 +125,5 @@ class DTORH:
             PCube[:, :, iZ] = pVec.reshape((nCount+1, mCount+1))[0:-1, 0:-1]  # now it is [N,M] array
             QCube[:, :, iZ] = qVec.reshape((nCount+1, mCount+1))[0:-1, 0:-1]  # now it is [N,M] array
 
-        return (PCube, QCube)
+        return PCube, QCube
 

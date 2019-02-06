@@ -47,6 +47,24 @@ class ToroHarmVecRep:
                               (-np.cosh(self.etaTens)**2 * np.sin(self.thetaTens)**2)*self.D2_psi_D_eta2_Tens + \
                               (-np.sinh(self.etaTens)**2 * np.cos(self.thetaTens)**2)*self.D2_psi_D_theta2_Tens
 
+        # third term
+
+        term_0 = self.mTens**2 * (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2) / np.sinh(self.etaTens)**2
+
+        term_e = np.cosh(self.etaTens) * (np.cosh(2*self.etaTens)*np.cos(2*self.thetaTens)-1) / (2*np.sinh(self.etaTens))
+
+        term_t = np.cosh(self.etaTens)**2 * np.sin(2*self.thetaTens)
+
+        term_et = 0.5 * np.sinh(2*self.etaTens)*np.sin(2*self.thetaTens)
+
+        term_ee = -np.cosh(self.etaTens)**2 * np.sin(self.thetaTens)**2
+
+        term_tt = -np.sinh(self.etaTens)**2 * np.cos(self.thetaTens)**2
+
+        self.LdotContr_Tens = term_0 * self.psiTens + term_e * self.D_psi_D_eta_Tens + term_t * self.D_psi_D_theta_Tens + \
+            term_ee * self.D2_psi_D_eta2_Tens + term_et * self.D2_psi_D_eta_theta_Tens + term_tt * self.D2_psi_D_theta2_Tens
+
+
     # get the legendre polynomials and build all the necessary psi and related tensors that will be needed for further
     # computation
     def __prep_psi_tens(self):
@@ -143,9 +161,13 @@ class ToroHarmVecRep:
         self.D2_psi_D_theta2_Tens = (4*np.cosh(self.etaTens)*np.cos(self.thetaTens)-np.cos(self.thetaTens)-3)*self.psiTens/\
                                     (8*CoshCos**2)
 
+        # cross-term
+        self.D2_psi_D_eta_theta_Tens = (-np.sin(self.thetaTens)*np.sinh(self.etaTens)/(2*CoshCos**2))*self.psiTens + \
+                                       (np.sin(self.thetaTens)/(2*CoshCos)+1j*self.nTens)*self.D_psi_D_eta_Tens
+
 
     # remove spatial points that are bad in toroidal coordinates and flatten arrays
-    def __extract_clean_points(self, xTens, yTens, zTens, divFTens, rDotFTens, tiny):
+    def __extract_clean_points(self, xTens, yTens, zTens, divFTens, rDotFTens, LDotFTens, tiny):
         # first of all get the toroidal coordinates
         torCrd = ToroCoords()
         etaTens, thetaTens, phiTens = torCrd.Cart_to_Toro(xTens, yTens, zTens)
@@ -169,6 +191,7 @@ class ToroHarmVecRep:
         self.phiVec = phiTens.flatten()[self.goodInds]
         self.divFVec = divFTens.flatten()[self.goodInds]
         self.rDotFVec = rDotFTens.flatten()[self.goodInds]
+        self.LDotFVec = LDotFTens.flatten()[self.goodInds]
 
         # also store the sqrt_metric for further computations
         self.jacobian = torCrd.sqrt_metric(self.etaVec, self.thetaVec, self.phiVec)
@@ -181,7 +204,7 @@ class ToroHarmVecRep:
     # then we need 3 rank three tensors giving the div(F), r.F and L.F, where F is the field of interest
     # nCount and mCount is the maxiumum orders of toroidal harmonics to consider
     # tiny = a finite small number taken to be equivalent to zero
-    def __init__(self, raw_xTens, raw_yTens, raw_zTens, raw_divFTens, raw_rDotFTens, nCount=5, mCount=7, tiny=1e-12):
+    def __init__(self, raw_xTens, raw_yTens, raw_zTens, raw_divFTens, raw_rDotFTens, raw_LDotFTens, nCount=5, mCount=7, tiny=1e-12):
         # !!!!!!!! for now only work with divergence  , rFTens, LFTens, later
 
         self.nCount = nCount
@@ -189,7 +212,7 @@ class ToroHarmVecRep:
 
         # convert tensors for spatial points into flattened vectors
         # and remove all the points that have bad cooridinates in toroidal coordinate system
-        self.__extract_clean_points(raw_xTens, raw_yTens, raw_zTens, raw_divFTens, raw_rDotFTens, tiny)
+        self.__extract_clean_points(raw_xTens, raw_yTens, raw_zTens, raw_divFTens, raw_rDotFTens, raw_LDotFTens, tiny)
 
         # prepare psi tensors
         self.__prep_psi_tens()
@@ -205,4 +228,5 @@ class ToroHarmVecRep:
         rDot_sol_Vec = 1j*(self.rDotFVec-np.einsum('lnm,lnms->s', self.aCoeff_Tens, self.psiTens))
         self.cCoeff_Tens = self.__find_decomposition(self.rDotContr_Tens, rDot_sol_Vec)
 
-
+        # final trerm
+        self.bCoeff_Tens = self.__find_decomposition(self.LdotContr_Tens, self.LDotFVec)

@@ -18,7 +18,8 @@ zVec = np.linspace(-2, 2, 19)
 xTens, yTens, zTens = np.meshgrid(xVec, yVec, zVec, indexing='ij')
 divFTens=divF_func(xTens, yTens, zTens)
 rDotFTens = (xTens**2+yTens**2+zTens**2)*xTens*np.exp(-(xTens**2+(yTens-2)**2+(zTens-1)**2))
+LDotFTens = 0*xTens
 
-toroHarmVec = ToroHarmVecRep(xTens, yTens, zTens, divFTens, rDotFTens)
+toroHarmVec = ToroHarmVecRep(xTens, yTens, zTens, divFTens, rDotFTens, LDotFTens)
 
 pass

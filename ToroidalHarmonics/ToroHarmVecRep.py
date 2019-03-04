@@ -205,7 +205,6 @@ class ToroHarmVecRep:
     # nCount and mCount is the maxiumum orders of toroidal harmonics to consider
     # tiny = a finite small number taken to be equivalent to zero
     def __init__(self, raw_xTens, raw_yTens, raw_zTens, raw_divFTens, raw_rDotFTens, raw_LDotFTens, nCount=19, mCount=19, tiny=1e-12):
-        # !!!!!!!! for now only work with divergence  , rFTens, LFTens, later
 
         self.nCount = nCount
         self.mCount = mCount

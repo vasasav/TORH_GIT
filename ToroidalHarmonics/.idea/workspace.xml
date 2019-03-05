@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eb49b70-e063-4fa9-bb28-a6114fe41678" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test_ToroHarmVecRep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ToroHarmVecRep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ToroHarmVecRep.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +11,42 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1479353185">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="662" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="662" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="600">
               <caret line="27" column="81" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="81" />
               <folding>
                 <element signature="e#66#84#0" expanded="true" />
@@ -29,8 +58,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FD_in_tor_Harm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="75">
               <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+              <folding>
+                <element signature="e#171#189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -38,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+            <state relative-caret-position="365">
+              <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
               <folding>
                 <element signature="e#100#115#0" expanded="true" />
               </folding>
@@ -50,19 +100,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="15025">
               <caret line="614" selection-start-line="614" selection-end-line="614" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DTORH.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="216" column="17" lean-forward="true" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+            <state relative-caret-position="1100">
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
-                <element signature="e#171#189#0" expanded="true" />
+                <element signature="e#113#132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,7 +121,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_TorHarmRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="2350">
               <caret line="97" column="23" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="23" />
               <folding>
                 <element signature="e#85#100#0" expanded="true" />
@@ -133,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,6 +212,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,47 +367,47 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 42m 13s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 43m 11s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 43m 45s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 44m 44s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 45m 06s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 45m 47s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 46m 06s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 46m 23s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 47m 17s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 47m 58s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 49m 07s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 51m 00s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 51m 53s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 52m 28s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 53m 43s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 54m 05s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 54m 16s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 57m 35s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 58m 43s.xml">
       <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49924585" visible="true" weight="0.17702845" />
+      <window_info id="Structure" order="1" sideWeight="0.5007542" side_tool="true" visible="true" weight="0.17702845" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="1600" y="0" width="1680" height="1010" id="Run" order="2" visible="true" weight="0.2166891" />
+      <window_info active="true" anchor="bottom" x="1600" y="0" width="1680" height="1010" id="Run" order="2" visible="true" weight="0.28091106" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42395693" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -370,6 +420,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -391,7 +444,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_ToroHarmVecRep.py</url>
-          <line>53</line>
+          <line>58</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
@@ -576,39 +629,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
           <caret line="72" column="46" selection-start-line="67" selection-end-line="72" selection-end-column="46" />
-          <folding>
-            <element signature="e#247#265#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DTORH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
-          <folding>
-            <element signature="e#113#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testToroCoords.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#60#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -616,29 +646,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#80#98#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/test_ToroHarmVecRep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FD_in_tor_Harm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/test_ToroHarmVecRep.py" />
     <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="600">
           <caret line="27" column="81" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="81" />
           <folding>
             <element signature="e#66#84#0" expanded="true" />
@@ -648,14 +662,24 @@
     </entry>
     <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="15025">
           <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DTORH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <folding>
+            <element signature="e#113#132#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_TorHarmRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="2350">
           <caret line="97" column="23" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="23" />
           <folding>
             <element signature="e#85#100#0" expanded="true" />
@@ -663,10 +687,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FD_in_tor_Harm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+        <state relative-caret-position="365">
+          <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
           <folding>
             <element signature="e#100#115#0" expanded="true" />
           </folding>
@@ -675,11 +706,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="216" column="17" lean-forward="true" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+        <state relative-caret-position="216">
+          <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
           <folding>
             <element signature="e#171#189#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
         </state>
       </provider>
     </entry>

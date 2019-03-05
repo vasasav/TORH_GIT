@@ -23,8 +23,9 @@ class test_ToroHarmVecRep(unittest.TestCase):
     dim_size = number of the single dimension for the coordinate cubes
     eta_max = maximum size for eta
     a_val the scale for toroidal coordinates
+    rtol the relative tolrance to use in comparisons
     """
-    def test_toro_coord(self, try_count = 50, dim_size = 3, eta_max = 13, a_val = 1.0):
+    def test_toro_coord(self, try_count = 50, dim_size = 3, eta_max = 13, a_val = 1.0, rtol = 1e-6):
 
         for iTry in range(try_count):
             # generate the positions in toroidal coordinates
@@ -41,15 +42,22 @@ class test_ToroHarmVecRep(unittest.TestCase):
             toro_vec_rep = ToroHarmVecRep(X, Y, Z, 0 * X, 0 * X, 0 * X)
 
             # compare the new values, use cos/sin to avoid phase unwrapping on angles
-            self.assertTrue(
-                np.all(
-                np.isclose(toro_vec_rep.etaVec, ETA.flatten())                      &
-                np.isclose(np.cos(toro_vec_rep.thetaVec), np.cos(THETA.flatten()))  &
-                np.isclose(np.sin(toro_vec_rep.thetaVec), np.sin(THETA.flatten()))  &
-                np.isclose(np.cos(toro_vec_rep.phiVec), np.cos(PHI.flatten()))      &
-                np.isclose(np.sin(toro_vec_rep.phiVec), np.sin(PHI.flatten()))
-                )
-            )
+            self.assertTrue(np.all(np.isclose(toro_vec_rep.etaVec, ETA.flatten(), rtol=rtol)))
+            # use of sin and cos allows to avoid unwrapping issues
+            self.assertTrue(np.all(np.isclose( np.sin(toro_vec_rep.thetaVec), np.sin(THETA.flatten()), rtol=rtol)))
+            self.assertTrue(np.all(np.isclose( np.cos(toro_vec_rep.thetaVec), np.cos(THETA.flatten()), rtol=rtol)))
+            # use of sin and cos allows to avoid unwrapping issues
+            self.assertTrue(np.all(np.isclose( np.sin(toro_vec_rep.phiVec), np.sin(PHI.flatten()), rtol=rtol)))
+            self.assertTrue(np.all(np.isclose( np.cos(toro_vec_rep.phiVec), np.cos(PHI.flatten()), rtol=rtol)))
+
+            # also within this time we compute the r2 within the initialization
+            self.assertTrue(np.all(np.isclose(toro_vec_rep.r2Vec, (X**2+Y**2+Z**2).flatten(), rtol=rtol)))
+
+            # also computing the Jacobian for the toroidal coordinates, i.e.
+            # \frac{\partial(xyz)}{\partial(\eta\theta\phi)}
 
             print('test_toro_coord run = %d' % iTry)
+
+    def test_psi_tensors(self):
+        pass # more to come!!!!
 

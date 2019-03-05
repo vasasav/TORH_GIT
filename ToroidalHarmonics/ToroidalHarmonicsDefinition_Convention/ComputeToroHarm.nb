@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15459,        420]
-NotebookOptionsPosition[     14959,        398]
-NotebookOutlinePosition[     15335,        414]
-CellTagsIndexPosition[     15292,        411]
+NotebookDataLength[     22919,        593]
+NotebookOptionsPosition[     22532,        575]
+NotebookOutlinePosition[     22906,        591]
+CellTagsIndexPosition[     22863,        588]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -54,72 +54,12 @@ Cell[BoxData[
     RowBox[{"Exp", "[", 
      RowBox[{"I", " ", "n", " ", "\[Theta]"}], "]"}], " ", 
     RowBox[{"Exp", "[", 
-     RowBox[{"I", " ", "m", " ", "\[Phi]"}], "]"}]}]}]}]], "Input"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Simplify", "[", 
-  RowBox[{
-   RowBox[{"D", "[", 
-    RowBox[{
-     RowBox[{"\[CapitalPsi]", "[", 
-      RowBox[{
-      "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "n", ",", "m", ",", 
-       "1"}], "]"}], ",", "\[Eta]"}], "]"}], "-", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"(", 
-       FractionBox[
-        RowBox[{
-         RowBox[{
-          RowBox[{"Cosh", "[", "\[Eta]", "]"}], " ", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"2", "n"}], "+", "1"}], ")"}], 
-             RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
-            RowBox[{"2", " ", "n", " ", 
-             RowBox[{"Cosh", "[", "\[Eta]", "]"}]}]}], ")"}]}], "-", "1"}], 
-        RowBox[{"2", " ", 
-         RowBox[{"Sinh", "[", "\[Eta]", "]"}], " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"Cosh", "[", "\[Eta]", "]"}], "-", 
-           RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]], ")"}], 
-      RowBox[{"\[CapitalPsi]", "[", 
-       RowBox[{
-       "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "n", ",", "m", ",", 
-        "1"}], "]"}]}], "+", 
-     RowBox[{
-      RowBox[{"(", " ", 
-       RowBox[{"n", "+", 
-        FractionBox["1", "2"], "-", "m"}], ")"}], " ", 
-      FractionBox[
-       RowBox[{"Exp", "[", 
-        RowBox[{
-         RowBox[{"-", "I"}], " ", "\[Theta]"}], "]"}], 
-       RowBox[{"Sinh", "[", "\[Eta]", "]"}]], 
-      RowBox[{"\[CapitalPsi]", "[", 
-       RowBox[{"\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", 
-        RowBox[{"n", "+", "1"}], ",", "m", ",", "1"}], "]"}]}]}], ")"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.7607859732039757`*^9, 3.7607860375978503`*^9}, {
-  3.760787892801793*^9, 3.7607879344683795`*^9}, {3.760788012740636*^9, 
-  3.7607880146180973`*^9}}],
-
-Cell[BoxData["0"], "Output",
- CellChangeTimes->{{3.7607859740818143`*^9, 3.7607859968872375`*^9}, 
-   3.7607860382197533`*^9, {3.76078791464369*^9, 3.760787935636776*^9}, 
-   3.760788050944683*^9, 3.7607973316833115`*^9}]
-}, Open  ]],
+     RowBox[{"I", " ", "m", " ", "\[Phi]"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.760816879016285*^9, 3.7608168929173183`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"tryCount", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"tryCount", "=", "500"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"numData", "=", 
@@ -130,6 +70,9 @@ Cell[BoxData[{
       RowBox[{"{", 
        RowBox[{"j", ",", "1", ",", 
         RowBox[{"5", "+", 
+         RowBox[{"2", "*", "2"}], "+", 
+         RowBox[{"2", "*", "2"}], "+", 
+         RowBox[{"2", "*", "2"}], "+", 
          RowBox[{"2", "*", "2"}], "+", 
          RowBox[{"2", "*", "2"}], "+", 
          RowBox[{"2", "*", "2"}]}]}], "}"}]}], "]"}]}], ";"}], 
@@ -157,6 +100,15 @@ Cell[BoxData[{
        RowBox[{"{", 
         RowBox[{"0", ",", 
          RowBox[{"2", "*", "\[Pi]"}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"randn", " ", "=", " ", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "30"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"randm", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", " ", "30"}], "}"}], "]"}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"randn", " ", "=", " ", 
       RowBox[{"RandomInteger", "[", 
@@ -235,6 +187,113 @@ Cell[BoxData[{
             RowBox[{
             "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
              "randm", ",", "2"}], "]"}], ",", "\[Theta]"}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"derivatives", " ", "-", " ", "\[Eta]\[Eta]"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Eta]\[Eta]First", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{
+            "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+             "randm", ",", "1"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Eta]", ",", "2"}], "}"}]}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Eta]\[Eta]Second", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{
+            "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+             "randm", ",", "2"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Eta]", ",", "2"}], "}"}]}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"derivatives", " ", "-", " ", "\[Theta]\[Theta]"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Theta]\[Theta]First", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{
+            "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+             "randm", ",", "1"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Theta]", ",", "2"}], "}"}]}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Theta]\[Theta]Second", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{
+            "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+             "randm", ",", "2"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Theta]", ",", "2"}], "}"}]}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"derivatives", " ", "-", " ", "\[Eta]\[Theta]"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Eta]\[Theta]First", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"\[CapitalPsi]", "[", 
+              RowBox[{
+              "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+               "randm", ",", "1"}], "]"}], ",", "\[Theta]"}], "]"}], ",", 
+           "\[Eta]"}], "]"}], "/.", 
+         RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
+        RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
+       RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"D2\[CapitalPsi]D\[Eta]\[Theta]Second", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"\[CapitalPsi]", "[", 
+              RowBox[{
+              "\[Eta]", ",", "\[Theta]", ",", "\[Phi]", ",", "randn", ",", 
+               "randm", ",", "2"}], "]"}], ",", "\[Theta]"}], "]"}], ",", 
+           "\[Eta]"}], "]"}], "/.", 
          RowBox[{"\[Eta]", "\[Rule]", "rand\[Eta]"}]}], "/.", 
         RowBox[{"\[Theta]", "\[Rule]", "rand\[Theta]"}]}], "/.", 
        RowBox[{"\[Phi]", "\[Rule]", "rand\[Phi]"}]}]}], ";", 
@@ -342,7 +401,7 @@ Cell[BoxData[{
       RowBox[{"Im", "[", "D\[CapitalPsi]D\[Eta]Second", "]"}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"(*", 
-      RowBox[{"the", " ", "\[Eta]", " ", "derivative"}], "*)"}], 
+      RowBox[{"the", " ", "\[Theta]", " ", "derivative"}], "*)"}], 
      "\[IndentingNewLine]", 
      RowBox[{"iOffset", " ", "=", " ", 
       RowBox[{"5", "+", "4", "+", "4"}]}], ";", "\[IndentingNewLine]", 
@@ -378,14 +437,128 @@ Cell[BoxData[{
         RowBox[{"iOffset", "+", "4"}], "]"}], "]"}], "=", 
       RowBox[{"Im", "[", "D\[CapitalPsi]D\[Theta]Second", "]"}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"the", " ", "\[Eta]\[Eta]", " ", "derivative"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"iOffset", " ", "=", " ", 
+      RowBox[{"5", "+", "4", "+", "4", "+", "4"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "1"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Eta]\[Eta]First", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "2"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Eta]\[Eta]First", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "3"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Eta]\[Eta]Second", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "4"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Eta]\[Eta]Second", "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"the", " ", "\[Theta]\[Theta]", " ", "derivative"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"iOffset", " ", "=", " ", 
+      RowBox[{"5", "+", "4", "+", "4", "+", "4", "+", "4"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "1"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Theta]\[Theta]First", "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "2"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Theta]\[Theta]First", "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "3"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Theta]\[Theta]Second", "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "4"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Theta]\[Theta]Second", "]"}]}], 
+     ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"the", " ", "\[Eta]\[Theta]", " ", "derivative"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"iOffset", " ", "=", " ", 
+      RowBox[{"5", "+", "4", "+", "4", "+", "4", "+", "4", "+", "4"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "1"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Eta]\[Theta]First", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "2"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Eta]\[Theta]First", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "3"}], "]"}], "]"}], "=", 
+      RowBox[{"Re", "[", "D2\[CapitalPsi]D\[Eta]\[Theta]Second", "]"}]}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numData", "[", 
+        RowBox[{"[", "iTry", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"iOffset", "+", "4"}], "]"}], "]"}], "=", 
+      RowBox[{"Im", "[", "D2\[CapitalPsi]D\[Eta]\[Theta]Second", "]"}]}], ";",
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"iTry", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
-   "\"\<C:\\\\Users\\\\Vassili Savinov\\\\Dropbox\\\\DARPA_Work\\\\TORH_GIT\\\
-\\ToroidalHarmonics\\\\ToroidalHarmonicsDefinition_Convention\\\\torHarm.csv\>\
-\"", ",", "numData", ",", "\"\<CSV\>\""}], "]"}], ";"}]}], "Input",
+   "\"\<C:\\\\Users\\\\Vassili\\\\Dropbox\\\\DARPA_Work\\\\TORH_GIT\\\\\
+ToroidalHarmonics\\\\ToroidalHarmonicsDefinition_Convention\\\\torHarm.csv\>\"\
+", ",", "numData", ",", "\"\<CSV\>\""}], "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.7607780018307295`*^9, 3.760778014578204*^9}, {
   3.7607820439432187`*^9, 3.7607821804906225`*^9}, {3.7607823810038395`*^9, 
   3.760782706066451*^9}, {3.760782744951292*^9, 3.7607827700358734`*^9}, {
@@ -393,13 +566,17 @@ Cell[BoxData[{
   3.760782901467973*^9}, {3.7607829333811913`*^9, 3.7607829410599737`*^9}, {
   3.7607853764606113`*^9, 3.7607854001975994`*^9}, {3.760785703916546*^9, 
   3.7607859407967944`*^9}, {3.760786067390729*^9, 3.760786068077344*^9}, {
-  3.760797261609356*^9, 3.7607973281545763`*^9}}]
+  3.760797261609356*^9, 3.7607973281545763`*^9}, {3.7608109596556263`*^9, 
+  3.7608110997233725`*^9}, {3.760815053606181*^9, 3.7608151401325893`*^9}, {
+  3.760816509230173*^9, 3.760816586199072*^9}, {3.76081798916928*^9, 
+  3.760818079554473*^9}, {3.760818423781245*^9, 3.7608184372065697`*^9}, {
+  3.7608184885361648`*^9, 3.7608184911096716`*^9}}]
 }, Open  ]]
 },
-WindowSize->{1920, 997},
-WindowMargins->{{Automatic, 1912}, {Automatic, -8}},
+WindowSize->{1600, 817},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 Magnification:>1.5 Inherited,
-FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -415,12 +592,8 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 171, 3, 106, "Section"],
-Cell[754, 27, 1091, 29, 79, "Input"],
-Cell[CellGroupData[{
-Cell[1870, 60, 1843, 51, 83, "Input"],
-Cell[3716, 113, 221, 3, 44, "Output"]
-}, Open  ]],
-Cell[3952, 119, 10991, 276, 1611, "Input"]
+Cell[754, 27, 1159, 30, 143, "Input"],
+Cell[1916, 59, 20600, 513, 2684, "Input"]
 }, Open  ]]
 }
 ]

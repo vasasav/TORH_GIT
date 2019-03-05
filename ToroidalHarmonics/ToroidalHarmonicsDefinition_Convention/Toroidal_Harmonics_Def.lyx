@@ -1728,7 +1728,7 @@ Let us obtain the diagonal second derivatives:
  & \quad+\frac{6\left(3+4n\left(2+n\right)\right)+\left(1+2n\right)\left(5+2n+\left(1+2n\right)\cosh2\eta\right)\cos2\theta}{\sinh\eta}+18\sinh\eta+\\
  & \quad+8n\left(5+4n+n\cosh2\eta\right)\sinh\eta\Biggr\}\cdot\Psi_{nm}^{\left(\lambda\right)}+\\
  & +\\
- & +\frac{\left(2m-2n-1\right)\exp\left(-i\theta\right)}{2\left(\cosh\eta-\cos\theta\right)}\cdot\Biggl\{\frac{2\left(n+1\right)}{\tanh^{2}\eta}-\frac{\left(3+2n\right)\cos\theta}{\tanh\eta\,\sinh\eta}+\frac{1}{\sinh^{2}\eta}\Biggr\}\Psi_{n+1,m}^{\left(\lambda\right)}+\\
+ & +\frac{\left(2m-2n-1\right)\exp\left(-i\theta\right)}{2\sinh\eta^{2}\left(\cosh\eta-\cos\theta\right)}\cdot\Biggl\{2+n-\left(3+2n\right)\cos\theta\,\cosh\eta+\left(1+n\right)\cosh2\eta\Biggr\}\Psi_{n+1,m}^{\left(\lambda\right)}+\\
  & +\\
  & +\frac{\exp\left(-i2\theta\right)\left(2m-3-2n\right)\left(2m-2n-1\right)}{4\sinh^{2}\eta}\cdot\Psi_{n+2,m}^{\left(\lambda\right)}
 \end{flalign*}
@@ -1743,7 +1743,8 @@ and the other one:
 \begin_inset Formula 
 \begin{flalign*}
 \partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}= & \partial_{\theta}\left(\left(\frac{\sin\theta}{2\cdot\left(\cosh\eta-\cos\theta\right)}+in\right)\Psi_{nm}^{\left(\lambda\right)}\right)\\
-\partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}= & \left(\frac{4\cosh\eta\,\cos\theta-\cos2\theta-3}{8\left(\cosh\eta-\cos\theta\right)^{2}}\right)\cdot\Psi_{nm}^{\left(\lambda\right)}
+\partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}= & \frac{1}{4\left(\cosh\eta-\cos\theta\right)^{2}}\cdot\Biggl\{2\left(\cosh\eta-\cos\theta\right)\left(\cos\theta-2n^{2}\left(\cosh\eta-\cos\theta\right)\right)+\\
+ & \quad+i4n\left(\cosh\eta-\cos\theta\right)\sin\theta-\sin^{2}\theta\Biggr\}\cdot\Psi_{nm}^{\left(\lambda\right)}
 \end{flalign*}
 
 \end_inset

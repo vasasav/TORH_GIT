@@ -35,7 +35,10 @@ class test_ToroHarmVecRep(unittest.TestCase):
         # load the datat computed by mathematica
         col_names = ['eta', 'theta', 'phi', 'n', 'm', 'psi_first_re', 'psi_first_im', 'psi_second_re', 'psi_second_im',
                      'dpsi_deta_first_re', 'dpsi_deta_first_im', 'dpsi_deta_second_re', 'dpsi_deta_second_im',
-                     'dpsi_dtheta_first_re', 'dpsi_dtheta_first_im', 'dpsi_dtheta_second_re', 'dpsi_dtheta_second_im']
+                     'dpsi_dtheta_first_re', 'dpsi_dtheta_first_im', 'dpsi_dtheta_second_re', 'dpsi_dtheta_second_im',
+                     'd2psi_deta2_first_re', 'd2psi_deta2_first_im', 'd2psi_deta2_second_re', 'd2psi_deta2_second_im',
+                     'd2psi_dtheta2_first_re', 'd2psi_dtheta2_first_im', 'd2psi_dtheta2_second_re', 'd2psi_dtheta2_second_im',
+                     'd2psi_detatheta_first_re', 'd2psi_detatheta_first_im', 'd2psi_detatheta_second_re', 'd2psi_detatheta_second_im']
         #
         validData = pd.read_csv('ToroidalHarmonicsDefinition_Convention\\torHarm.csv', names=col_names)
 
@@ -101,6 +104,54 @@ class test_ToroHarmVecRep(unittest.TestCase):
         self.assertTrue(np.all(np.isclose(np.imag(comp_dpsi_dtheta_first), tgt_dpsi_dtheta_first_im, rtol=rtol)))
         self.assertTrue(np.all(np.isclose(np.real(comp_dpsi_dtheta_second), tgt_dpsi_dtheta_second_re, rtol=rtol)))
         self.assertTrue(np.all(np.isclose(np.imag(comp_dpsi_dtheta_second), tgt_dpsi_dtheta_second_im, rtol=rtol)))
+
+        # next the derivatives of the psi tensor d2psi_deta2
+        comp_d2psi_deta2_first = np.array(
+            [toro_vec_rep.D2_psi_D_eta2_Tens[0, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        comp_d2psi_deta2_second = np.array(
+            [toro_vec_rep.D2_psi_D_eta2_Tens[1, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        # tagret
+        tgt_d2psi_deta2_first_re = np.array(validData['d2psi_deta2_first_re'])
+        tgt_d2psi_deta2_first_im = np.array(validData['d2psi_deta2_first_im'])
+        tgt_d2psi_deta2_second_re = np.array(validData['d2psi_deta2_second_re'])
+        tgt_d2psi_deta2_second_im = np.array(validData['d2psi_deta2_second_im'])
+        #
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_deta2_first), tgt_d2psi_deta2_first_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_deta2_first), tgt_d2psi_deta2_first_im, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_deta2_second), tgt_d2psi_deta2_second_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_deta2_second), tgt_d2psi_deta2_second_im, rtol=rtol)))
+
+        # next the derivatives of the psi tensor d2psi_dtheta2
+        comp_d2psi_dtheta2_first = np.array(
+            [toro_vec_rep.D2_psi_D_theta2_Tens[0, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        comp_d2psi_dtheta2_second = np.array(
+            [toro_vec_rep.D2_psi_D_theta2_Tens[1, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        # tagret
+        tgt_d2psi_dtheta2_first_re = np.array(validData['d2psi_dtheta2_first_re'])
+        tgt_d2psi_dtheta2_first_im = np.array(validData['d2psi_dtheta2_first_im'])
+        tgt_d2psi_dtheta2_second_re = np.array(validData['d2psi_dtheta2_second_re'])
+        tgt_d2psi_dtheta2_second_im = np.array(validData['d2psi_dtheta2_second_im'])
+        #
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_dtheta2_first), tgt_d2psi_dtheta2_first_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_dtheta2_first), tgt_d2psi_dtheta2_first_im, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_dtheta2_second), tgt_d2psi_dtheta2_second_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_dtheta2_second), tgt_d2psi_dtheta2_second_im, rtol=rtol)))
+
+        # next the derivatives of the psi tensor d2psi_detatheta
+        comp_d2psi_detatheta_first = np.array(
+            [toro_vec_rep.D2_psi_D_eta_theta_Tens[0, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        comp_d2psi_detatheta_second = np.array(
+            [toro_vec_rep.D2_psi_D_eta_theta_Tens[1, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        # tagret
+        tgt_d2psi_detatheta_first_re = np.array(validData['d2psi_detatheta_first_re'])
+        tgt_d2psi_detatheta_first_im = np.array(validData['d2psi_detatheta_first_im'])
+        tgt_d2psi_detatheta_second_re = np.array(validData['d2psi_detatheta_second_re'])
+        tgt_d2psi_detatheta_second_im = np.array(validData['d2psi_detatheta_second_im'])
+        #
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_detatheta_first), tgt_d2psi_detatheta_first_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_detatheta_first), tgt_d2psi_detatheta_first_im, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.real(comp_d2psi_detatheta_second), tgt_d2psi_detatheta_second_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_d2psi_detatheta_second), tgt_d2psi_detatheta_second_im, rtol=rtol)))
 
     """
     One of the first things to be done in the test_ToroHarmVecRep

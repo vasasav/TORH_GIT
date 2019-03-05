@@ -146,22 +146,27 @@ class ToroHarmVecRep:
                    8*self.nTens*(5+4*self.nTens+self.nTens*np.cosh(2*self.etaTens))*np.sinh(self.etaTens)
         term_0 = preFac_0 * (term1_0 + term2_0 + term34_0)
         ##
-        preFac_1 = (2*self.mTens - 2*self.nTens - 1)*np.exp(-1j*self.thetaTens)/(2*CoshCos)
+        preFac_1 = (2*self.mTens - 2*self.nTens - 1)*np.exp(-1j*self.thetaTens)/(2*(np.sinh(self.etaTens)**2)*CoshCos)
         #
-        term123_1 = 2*(self.nTens+1)/np.tanh(self.etaTens)**2 - \
-                    (3+2*self.nTens)*np.cos(self.thetaTens)/(np.tanh(self.etaTens)*np.sinh(self.etaTens))\
-                    + 1/np.sinh(self.etaTens)**2
+        term123_1 = 2 + self.nTens - (3+2*self.nTens)*np.cos(self.thetaTens)*np.cosh(self.etaTens)+\
+                    (1+self.nTens)*np.cosh(2*self.etaTens)
         #
         term_1 = preFac_1 * term123_1
         ##
-        term_2 = np.exp(-1j*2*self.thetaTens)*(2*self.mTens-3-2*self.nTens)*(2*self.mTens-2*self.nTens-1)/(4*np.sinh(self.etaTens)**2)
+        term_2 = \
+            np.exp(-1j*2*self.thetaTens)*(2*self.mTens-3-2*self.nTens)*(2*self.mTens-2*self.nTens-1)\
+            /(4*np.sinh(self.etaTens)**2)
 
         #now put it together
         self.D2_psi_D_eta2_Tens = term_0*self.psiTens + term_1*self.psi_n_plus_1_Tens + term_2*self.psi_n_plus_2_Tens
 
-        #luckily the other one is simpler
-        self.D2_psi_D_theta2_Tens = (4*np.cosh(self.etaTens)*np.cos(self.thetaTens)-np.cos(self.thetaTens)-3)*self.psiTens/\
-                                    (8*CoshCos**2)
+        #second order with respect  to theta
+        preFac = 1.0/(4*CoshCos**2)
+        term0 = 2*CoshCos*(np.cos(self.thetaTens)-2*self.nTens**2*CoshCos)
+        term1 = 1j*4*self.nTens*CoshCos*np.sin(self.thetaTens)
+        term2 = -np.sin(self.thetaTens)**2
+        #
+        self.D2_psi_D_theta2_Tens = preFac*(term0+term1+term2)*self.psiTens
 
         # cross-term
         self.D2_psi_D_eta_theta_Tens = (-np.sin(self.thetaTens)*np.sinh(self.etaTens)/(2*CoshCos**2))*self.psiTens + \

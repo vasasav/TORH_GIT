@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eb49b70-e063-4fa9-bb28-a6114fe41678" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ToroHarmVecRep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/ToroidCoords_and_VectBasis_new.nb" beforeDir="false" afterPath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/ToroidCoords_and_VectBasis_new.nb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ToroHarmVecRep.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,22 +22,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="662" />
+          <entry key="py" value="3250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="662" />
+          <entry key="Python" value="3250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -46,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state>
               <caret line="27" column="81" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="81" />
               <folding>
                 <element signature="e#66#84#0" expanded="true" />
@@ -67,32 +68,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+            <state relative-caret-position="416">
+              <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
               <folding>
                 <element signature="e#171#189#0" expanded="true" />
+                <element signature="e#8745#10324#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+        <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+            <state relative-caret-position="390">
+              <caret line="98" column="87" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
+              <folding>
+                <element signature="e#100#115#0" expanded="true" />
+                <marker date="1551808449809" expanded="true" signature="515:870" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
+        <entry file="file://$PROJECT_DIR$/testToroCoords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+            <state relative-caret-position="450">
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
-                <element signature="e#100#115#0" expanded="true" />
+                <element signature="e#60#78#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -100,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15025">
-              <caret line="614" selection-start-line="614" selection-end-line="614" />
+            <state relative-caret-position="1422">
+              <caret line="604" selection-start-line="604" selection-end-line="604" />
             </state>
           </provider>
         </entry>
@@ -121,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_TorHarmRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2350">
+            <state relative-caret-position="2425">
               <caret line="97" column="23" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="23" />
               <folding>
                 <element signature="e#85#100#0" expanded="true" />
@@ -163,8 +178,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/FourierProp.py" />
         <option value="$PROJECT_DIR$/../../Tanchao/GenWaves.py" />
         <option value="$PROJECT_DIR$/FD_in_tor_Harm.py" />
-        <option value="$PROJECT_DIR$/ToroHarmVecRep.py" />
         <option value="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/test_ToroHarmVecRep.py" />
+        <option value="$PROJECT_DIR$/ToroHarmVecRep.py" />
         <option value="$PROJECT_DIR$/test_ToroHarmVecRep.py" />
       </list>
     </option>
@@ -242,49 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord">
-    <configuration name="FourierProp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ToroidalHarmonics" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/FourierProp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GenWaves" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ToroidalHarmonics" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Tanchao" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Tanchao/GenWaves.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep">
     <configuration name="testToroHarmVecRep" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ToroidalHarmonics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -321,6 +294,36 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ToroidalHarmonics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ToroHarmVecRep.test_ToroHarmVecRep&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_psi_tensors" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ToroidalHarmonics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ToroHarmVecRep.test_ToroHarmVecRep.test_psi_tensors&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="ToroidalHarmonics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -338,18 +341,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.testToroHarmVecRep" />
-      <item itemvalue="Python.FourierProp" />
-      <item itemvalue="Python.GenWaves" />
       <item itemvalue="Python tests.pytest for test_TorHarmRep.TestTorHarmRep.test_Decomposition" />
       <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" />
+      <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_psi_tensors" />
+      <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" />
+        <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_psi_tensors" />
         <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" />
         <item itemvalue="Python.testToroHarmVecRep" />
         <item itemvalue="Python tests.pytest for test_TorHarmRep.TestTorHarmRep.test_Decomposition" />
-        <item itemvalue="Python.GenWaves" />
-        <item itemvalue="Python.FourierProp" />
       </list>
     </recent_temporary>
   </component>
@@ -367,35 +370,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.04 at 23h 47m 58s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_psi_tensors - 2019.03.05 at 14h 35m 50s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_psi_tensors" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 49m 07s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 14h 36m 01s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 51m 00s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 14h 36m 57s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 51m 53s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 27m 00s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 52m 28s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 27m 50s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 53m 43s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 27m 57s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 54m 05s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 28m 09s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 54m 16s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 28m 24s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 57m 35s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 28m 35s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep_test_toro_coord - 2019.03.05 at 11h 58m 43s.xml">
-      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" configurationId="tests" />
+    <history-entry file="pytest_for_test_ToroHarmVecRep_test_ToroHarmVecRep - 2019.03.05 at 15h 28m 48s.xml">
+      <configuration name="pytest for test_ToroHarmVecRep.test_ToroHarmVecRep" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -408,7 +411,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" x="1600" y="0" width="1680" height="1010" id="Run" order="2" visible="true" weight="0.28091106" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42395693" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28741866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -441,11 +444,6 @@
           <url>file://$APPLICATION_CONFIG_DIR$/scratches/FourierProp.py</url>
           <line>67</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_ToroHarmVecRep.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -500,53 +498,48 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>np.all(np.isclose(toro_vec_rep.etaVec, ETA.flatten()) &amp; np.isclose(np.cos(toro_vec_rep.thetaVec), np.cos(THETA.flatten())))</expression-string>
+        <expression-string>aprime=np.array([toro_vec_rep.psiTens[0, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.all(np.isclose(toro_vec_rep.etaVec, ETA.flatten()) | np.isclose(np.cos(toro_vec_rep.thetaVec), np.cos(THETA.flatten())))</expression-string>
+        <expression-string>aprime=np.array([toro_vec_rep.psiTens[0, iCell, iCell, iCell] for iCell in range(len(xVec))])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.all(np.isclose(toro_vec_rep.etaVec, ETA.flatten()) and np.isclose(np.cos(toro_vec_rep.thetaVec), np.cos(THETA.flatten())))</expression-string>
+        <expression-string>aprime=[toro_vec_rep.psiTens[0, iCell, iCell, iCell] for iCell in range(len(xVec))]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.all(np.isclose(toro_vec_rep.etaVec, ETA.flatten()))</expression-string>
+        <expression-string>aprime=toro_vec_rep.psiTens[0, 0, 0, :]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.isclose(toro_vec_rep.etaVec, ETA.flatten())</expression-string>
+        <expression-string>aprime=toro_vec_rep.psiTens[0, 0, 0, 0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>a=np.sin(toro_vec_rep.phiVec) - np.sin(phi.flatten())</expression-string>
+        <expression-string>aprime=toro_vec_rep.psiTens0, 0, 0, 0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>a=np.sin(toro_vec_rep.thetaVec) - np.sin(theta.flatten())</expression-string>
+        <expression-string>aprime=toro_vec_rep.psi_tens[0, 0, 0, 0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>a=np.cos(toro_vec_rep.thetaVec) - np.cos(theta.flatten())</expression-string>
+        <expression-string>aPrime =</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>a=toro_vec_rep.etaVec - ETA.flatten()</expression-string>
+        <expression-string>a=np.array(validData['re_psi_first'])</expression-string>
         <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>xRange.shape</expression-string>
-        <language-id>TEXT</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
@@ -635,13 +628,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/testToroCoords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TensorPlay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -652,18 +638,11 @@
     <entry file="file://$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/test_ToroHarmVecRep.py" />
     <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state>
           <caret line="27" column="81" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="81" />
           <folding>
             <element signature="e#66#84#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15025">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
         </state>
       </provider>
     </entry>
@@ -677,9 +656,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_TorHarmRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2350">
+        <state relative-caret-position="2425">
           <caret line="97" column="23" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="23" />
           <folding>
             <element signature="e#85#100#0" expanded="true" />
@@ -694,30 +680,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+        <state relative-caret-position="1422">
+          <caret line="604" selection-start-line="604" selection-end-line="604" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testToroCoords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="e#100#115#0" expanded="true" />
+            <element signature="e#60#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+        <state relative-caret-position="416">
+          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
           <folding>
             <element signature="e#171#189#0" expanded="true" />
+            <element signature="e#8745#10324#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+    <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        <state relative-caret-position="390">
+          <caret line="98" column="87" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
+          <folding>
+            <element signature="e#100#115#0" expanded="true" />
+            <marker date="1551808449809" expanded="true" signature="515:870" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

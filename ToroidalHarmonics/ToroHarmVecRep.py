@@ -67,6 +67,8 @@ class ToroHarmVecRep:
 
     # get the legendre polynomials and build all the necessary psi and related tensors that will be needed for further
     # computation
+    # the tensors here will have 4 dimensions: first dimension is either for first or second kind of Leg function
+    # second dimension for n, third for m, fourth dimension is for different positions in space (flattened into a single column)
     def __prep_psi_tens(self):
         # get the necessary legendre functions
         with DTORH() as dtorh: (pCube, qCube) = \

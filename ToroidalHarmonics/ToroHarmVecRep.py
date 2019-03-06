@@ -26,15 +26,16 @@ class ToroHarmVecRep:
     # l - type (P,Q)
     # n - legendre n
     # m - legendre m
-    # s - all the spatial values flattened in an array
+    # s - all the spatial values flattened into an array
     def __prep_contraction_tens(self):
+        #first term
         # way that divergence, angular momentum and radius. modify the toroidal harmonics
         self.divContr_Tens = (3 * self.psiTens
                               - np.sinh(self.etaTens) * np.cos(self.thetaTens) * self.D_psi_D_eta_Tens
                               - np.cosh(self.etaTens) * np.sin(self.thetaTens) * self.D_psi_D_theta_Tens)
 
+        #second term
         # the second one needs to be done in terms
-
         term_eta = np.sinh(2*self.etaTens)*np.cos(self.thetaTens)*np.sin(self.thetaTens)**2/(np.cosh(self.etaTens) -
                                                                                              np.cos(self.thetaTens)) - \
                    (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2)*np.cosh(self.etaTens)
@@ -48,7 +49,6 @@ class ToroHarmVecRep:
                               (-np.sinh(self.etaTens)**2 * np.cos(self.thetaTens)**2)*self.D2_psi_D_theta2_Tens
 
         # third term
-
         term_0 = self.mTens**2 * (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2) / np.sinh(self.etaTens)**2
 
         term_e = np.cosh(self.etaTens) * (np.cosh(2*self.etaTens)*np.cos(2*self.thetaTens)-1) / (2*np.sinh(self.etaTens))

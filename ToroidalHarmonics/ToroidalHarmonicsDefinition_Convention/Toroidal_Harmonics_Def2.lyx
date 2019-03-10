@@ -743,126 +743,6 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Subsubsection
-Term 
-\begin_inset Formula $\vec{r}.\vec{F}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Assuming that 
-\begin_inset Formula $a_{nm}^{\left(\lambda\right)}$
-\end_inset
-
- is already known, we have
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Bear in mind that for the Levi-Civita, it is 
-\begin_inset Formula $\epsilon^{\alpha\beta\gamma}/\sqrt{g}$
-\end_inset
-
- and 
-\begin_inset Formula $\epsilon_{\alpha\beta\gamma}\cdot\sqrt{g}$
-\end_inset
-
- that transform like tensors.
-\end_layout
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{flalign*}
-\vec{r}.\vec{F}= & a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\left(\vec{r}\right)+c_{nm}^{\left(\lambda\right)}\cdot\vec{r}.\vec{\nabla}\times\vec{L}\Psi_{nm}^{\left(\lambda\right)}\left(\vec{r}\right)\\
-\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}= & c_{nm}^{\left(\lambda\right)}\cdot\vec{r}.\vec{\nabla}\times\vec{L}\Psi_{nm}^{\left(\lambda\right)}\\
-= & c_{nm}^{\left(\lambda\right)}\cdot r^{\alpha}g_{\alpha\beta}\frac{\epsilon^{\beta\gamma\mu}}{\sqrt{g}}\nabla_{\gamma}\left(\vec{L}\Psi_{nm}^{\left(\lambda\right)}\right)_{\mu}\\
-= & c_{nm}^{\left(\lambda\right)}\cdot r^{\alpha}g_{\alpha\beta}\frac{\epsilon^{\beta\gamma\mu}}{\sqrt{g}}\nabla_{\gamma}\left(-i\vec{r}\times\vec{\nabla}\Psi_{nm}^{\left(\lambda\right)}\right)_{\mu}\\
-= & -ic_{nm}^{\left(\lambda\right)}\cdot r^{\alpha}g_{\alpha\beta}\frac{\epsilon^{\beta\gamma\mu}}{\sqrt{g}}\nabla_{\gamma}\left(g_{\mu\kappa}\frac{\epsilon^{\kappa\phi\zeta}}{\sqrt{g}}r^{\sigma}g_{\phi\sigma}\nabla_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This last expression is written in covariant terms, so will be valid in
- any coordinate system.
- It makes sense to adopt the co-radius, then
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Bearing in mind that connection is symmetric and Levi-Civita is anti-symmetric
-\end_layout
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{flalign}
-i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)= & c_{nm}^{\left(\lambda\right)}\cdot\bar{r}_{\alpha}\frac{\bar{\epsilon}^{\alpha\beta\mu}}{\sqrt{\bar{g}}}\bar{\nabla}_{\beta}\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\phi\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\phi}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)\nonumber \\
-= & c_{nm}^{\left(\lambda\right)}\cdot\bar{r}_{\alpha}\frac{\bar{\epsilon}^{\alpha\beta\mu}}{\sqrt{\bar{g}}}\cdot\Biggl[\bar{\partial}_{\beta}\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\phi\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\phi}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)-\nonumber \\
- & \quad-\bar{\Gamma}_{\beta\mu}^{\gamma}\bar{g}_{\gamma\kappa}\frac{\bar{\epsilon}^{\kappa\phi\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\phi}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\Biggr]\nonumber \\
-i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)= & c_{nm}^{\left(\lambda\right)}\cdot\bar{r}_{\alpha}\frac{\bar{\epsilon}^{\alpha\beta\mu}}{\sqrt{\bar{g}}}\cdot\bar{\partial}_{\beta}\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\phi\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\phi}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)\label{eq:GenRDotF}
-\end{flalign}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Term 
-\begin_inset Formula $\vec{L}.\vec{F}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The easiest way is:
-\begin_inset Formula 
-\begin{flalign*}
-\vec{L}.\vec{F}= & b_{nm}^{\left(\lambda\right)}\cdot L^{2}\Psi_{nm}^{\left(\lambda\right)}
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-So what is the anglar momenutum squared in toroidal coordinates? 
-\begin_inset Formula 
-\begin{flalign*}
-L^{2}f= & \left(-i\epsilon_{\alpha\beta\gamma}\sqrt{g}r^{\beta}g^{\gamma\kappa}\nabla_{\kappa}\right)\left(-i\frac{\epsilon^{\alpha\mu\nu}}{\sqrt{g}}r_{\mu}\nabla_{\nu}\right)f\\
-= & -\left(\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\nabla}_{\kappa}\right)\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\nabla}_{\nu}\right)f\\
-= & -\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\nabla}_{\kappa}\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\partial}_{\nu}f\right)\\
-= & -\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\partial}_{\kappa}\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\partial}_{\nu}f\right)-\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\Gamma}_{\kappa\zeta}^{\alpha}\cdot\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\partial}_{\nu}f\right)
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-So:
-\begin_inset Formula 
-\begin{equation}
-\vec{L}.\vec{F}=b_{nm}^{\left(\lambda\right)}\cdot\left[-\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\partial}_{\kappa}\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\partial}_{\nu}\Psi_{nm}^{\left(\lambda\right)}\right)-\bar{\epsilon}_{\alpha\beta\gamma}\sqrt{\bar{g}}\bar{r}^{\beta}\bar{g}^{\gamma\kappa}\bar{\Gamma}_{\kappa\zeta}^{\alpha}\cdot\left(\frac{\bar{\epsilon}^{\alpha\mu\nu}}{\sqrt{\bar{g}}}\bar{r}_{\mu}\bar{\partial}_{\nu}\Psi_{nm}^{\left(\lambda\right)}\right)\right]\label{eq:GenLDotF}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Toroidal coordinates and vector basis
 \end_layout
@@ -1132,6 +1012,19 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+The position vector can be defined in normalized basis as (no sum implied):
+\begin_inset Formula 
+\begin{flalign}
+\vec{e}_{\alpha}.\vec{r}= & \sqrt{g_{\alpha\alpha}}\,r^{\alpha}\nonumber \\
+\vec{r}= & \left(-\frac{a\,\sinh\eta\,\cos\theta}{\cosh\eta-\cos\theta}\right)\vec{\hat{\eta}}+\left(-\frac{a\,\cosh\eta\,\sin\theta}{\cosh\eta-\cos\theta}\right)\vec{\hat{\theta}}\label{eq:NormPosVec}
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Also:
 \begin_inset Formula 
 \begin{flalign}
@@ -1372,9 +1265,9 @@ Note that the above expression is for the natural basis, Mathematica operates
 The explicit expression for the angular momentum is simpler for the normalized
  basis, so I will quote this one:
 \begin_inset Formula 
-\begin{flalign*}
-\left(\vec{L}f\right)_{norm}=-i & \Biggl\{\left(-\frac{\sin\theta}{\tanh\eta}\,\partial_{\phi}f\right)\,\vec{\hat{\eta}}+\left(\cos\theta\,\partial_{\phi}f\right)\vec{\hat{\theta}}+\left(\cosh\eta\,\sin\theta\,\partial_{\eta}f-\sinh\eta\,\cos\theta\,\partial_{\theta}f\right)\vec{\hat{\phi}}\Biggr\}
-\end{flalign*}
+\begin{flalign}
+\left(\vec{L}f\right)_{norm}=-i & \Biggl\{\left(-\frac{\sin\theta}{\tanh\eta}\,\partial_{\phi}f\right)\,\vec{\hat{\eta}}+\left(\cos\theta\,\partial_{\phi}f\right)\vec{\hat{\theta}}+\left(\cosh\eta\,\sin\theta\,\partial_{\eta}f-\sinh\eta\,\cos\theta\,\partial_{\theta}f\right)\vec{\hat{\phi}}\Biggr\}\label{eq:NormAngMomSpec}
+\end{flalign}
 
 \end_inset
 
@@ -1390,24 +1283,20 @@ Term
 \end_layout
 
 \begin_layout Standard
-Using
-\begin_inset Foot
-status collapsed
+Working from:
+\begin_inset Formula 
+\begin{flalign*}
+\vec{r}.\vec{F}= & a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\left(\vec{r}\right)+c_{nm}^{\left(\lambda\right)}\cdot\vec{r}.\vec{\nabla}\times\vec{L}\Psi_{nm}^{\left(\lambda\right)}\left(\vec{r}\right)\\
+\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)= & c_{nm}^{\left(\lambda\right)}\cdot\vec{r}.\vec{\nabla}\times\vec{L}\Psi_{nm}^{\left(\lambda\right)}
+\end{flalign*}
 
-\begin_layout Plain Layout
-As soon as a replace the generic derivatives ( 
-\begin_inset Formula $\bar{\partial}_{\dots}$
 \end_inset
 
-) with actual ones in toroidal coordinates (
-\begin_inset Formula $\partial_{\eta,\,\theta,\,\phi}$
-\end_inset
 
-), I will loose the bar to avoid notation overheads.
 \end_layout
 
-\end_inset
-
+\begin_layout Standard
+I can use the definition of the position vector in normalized basis from
  Eq.
 \begin_inset space ~
 \end_inset
@@ -1415,73 +1304,50 @@ As soon as a replace the generic derivatives (
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GenRDotF"
+reference "eq:NormPosVec"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) and Eq.
+) and the definition of the normalized angular momentum of a function from
+ Eq.
 \begin_inset space ~
 \end_inset
 
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:covREta"
+reference "eq:NormAngMomSpec"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-,
-\begin_inset space ~
+), as well as Mathematica simplification to get
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Replacing 
+\begin_inset Formula $\partial_{\phi\phi}\Psi_{nm}^{\left(\lambda\right)}=\left(im\right)^{2}\Psi_{nm}^{\left(\lambda\right)}$
 \end_inset
 
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:TorMetric"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-,
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:TorMetSqrt"
-plural "false"
-caps "false"
-noprefix "false"
+ straight away.
+\end_layout
 
 \end_inset
 
-,
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:TorInvMetric"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-):
+:
 \begin_inset Formula 
 \begin{flalign*}
-i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)= & c_{nm}^{\left(\lambda\right)}\cdot\bar{r}_{\alpha}\frac{\bar{\epsilon}^{\alpha\beta\mu}}{\sqrt{\bar{g}}}\cdot\bar{\partial}_{\beta}\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\rho\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\rho}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)
+\vec{r}.\vec{\nabla}\times\vec{L}\Psi_{nm}^{\left(\lambda\right)}= & \frac{i\sinh^{2}\eta}{8}\,\Biggl\{\\
+ & +\left(\frac{-4\,\cosh\eta}{\sinh^{3}\eta}+\frac{\sinh4\eta\,\cos2\theta}{\sinh^{4}\eta}\right)\,\partial_{\eta}\Psi_{nm}^{\left(\lambda\right)}+\left(\frac{8\,\sin2\theta}{\tanh^{2}\eta}\right)\,\partial_{\theta}\Psi_{nm}^{\left(\lambda\right)}+\\
+ & +\left(\frac{8\,\sin2\theta}{\tanh\eta}\right)\,\partial_{\eta\theta}\Psi_{nm}^{\left(\lambda\right)}+\left(-\frac{8\,\sin^{2}\theta}{\tanh^{2}\eta}\right)\,\partial_{\eta\eta}\Psi_{nm}^{\left(\lambda\right)}+\\
+ & +\left(-8\cos^{2}\theta\right)\,\partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}+\frac{4}{\sinh^{4}\eta}\,\left(\cos2\theta-\cosh2\eta\right)\,\left(im\right)^{2}\Psi_{nm}^{\left(\lambda\right)}\\
+ & \Biggr\}
 \end{flalign*}
 
 \end_inset
@@ -1490,89 +1356,26 @@ i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(
 \end_layout
 
 \begin_layout Standard
-Let us focus on the inner expression first:
+The equation to solve for coefficient 
+\begin_inset Formula $c_{nm}^{\left(\lambda\right)}$
+\end_inset
+
+ is therefore:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{flalign*}
-\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\rho\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\rho}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)_{\mu\to\eta}= & \bar{g}_{\eta\eta}\frac{\bar{\epsilon}^{\eta\theta\phi}}{\sqrt{\bar{g}}}\bar{r}_{\theta}\partial_{\phi}\Psi_{nm}^{\left(\lambda\right)}=\bar{g}_{\eta\eta}\frac{1}{\sqrt{\bar{g}}}\bar{r}_{\theta}\left(im\right)\Psi_{nm}^{\left(\lambda\right)}\\
-= & \frac{a^{2}}{\left(\cosh\eta-\cos\theta\right)^{2}}\cdot\frac{\left(\cosh\eta-\cos\theta\right)^{3}}{a^{3}\sinh\eta}\cdot\left(-\frac{a^{2}\cdot\sinh\eta\cdot\cos\theta}{\left(\cosh\eta-\cos\theta\right)^{2}}\right)\cdot\left(im\right)\Psi_{nm}^{\left(\lambda\right)}\\
-= & -im\cdot\frac{a\cdot\cos\theta}{\left(\cosh\eta-\cos\theta\right)}\cdot\Psi_{nm}^{\left(\lambda\right)}
+\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)=c_{nm}^{\left(\lambda\right)}\cdot & \frac{i\sinh^{2}\eta}{8}\,\Biggl\{\\
+ & +\left(\frac{-4\,\cosh\eta}{\sinh^{3}\eta}+\frac{\sinh4\eta\,\cos2\theta}{\sinh^{4}\eta}\right)\,\partial_{\eta}\Psi_{nm}^{\left(\lambda\right)}+\left(\frac{8\,\sin2\theta}{\tanh^{2}\eta}\right)\,\partial_{\theta}\Psi_{nm}^{\left(\lambda\right)}+\\
+ & +\left(\frac{8\,\sin2\theta}{\tanh\eta}\right)\,\partial_{\eta\theta}\Psi_{nm}^{\left(\lambda\right)}+\left(-\frac{8\,\sin^{2}\theta}{\tanh^{2}\eta}\right)\,\partial_{\eta\eta}\Psi_{nm}^{\left(\lambda\right)}+\\
+ & +\left(-8\cos^{2}\theta\right)\,\partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}+\frac{4}{\sinh^{4}\eta}\,\left(\cos2\theta-\cosh2\eta\right)\,\left(im\right)^{2}\Psi_{nm}^{\left(\lambda\right)}\\
+ & \Biggr\}
 \end{flalign*}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Second component:
-\begin_inset Formula 
-\begin{flalign*}
-\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\rho\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\rho}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)_{\mu\to\theta}= & \bar{g}_{\theta\theta}\frac{\bar{\epsilon}^{\theta\eta\phi}}{\sqrt{\bar{g}}}\bar{r}_{\eta}\partial_{\phi}\Psi_{nm}^{\left(\lambda\right)}=-\bar{g}_{\theta\theta}\frac{1}{\sqrt{\bar{g}}}\bar{r}_{\eta}\left(im\right)\Psi_{nm}^{\left(\lambda\right)}\\
-= & -im\cdot\frac{a^{2}}{\left(\cosh\eta-\cos\theta\right)^{2}}\cdot\frac{\left(\cosh\eta-\cos\theta\right)^{3}}{a^{3}\sinh\eta}\cdot\left(-\frac{a^{2}\cdot\cosh\eta\cdot\sin\theta}{\left(\cosh\eta-\cos\theta\right)^{2}}\right)\Psi_{nm}^{\left(\lambda\right)}\\
-= & im\cdot\frac{a\cdot\coth\eta\cdot\sin\theta}{\left(\cosh\eta-\cos\theta\right)}\cdot\Psi_{nm}^{\left(\lambda\right)}
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Third component:
-\begin_inset Formula 
-\begin{flalign*}
-\left(\bar{g}_{\mu\kappa}\frac{\bar{\epsilon}^{\kappa\rho\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\rho}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\right)_{\mu\to\phi}= & \bar{g}_{\phi\phi}\frac{\bar{\epsilon}^{\phi\rho\zeta}}{\sqrt{\bar{g}}}\bar{r}_{\rho}\bar{\partial}_{\zeta}\Psi_{nm}^{\left(\lambda\right)}\\
-= & \bar{g}_{\phi\phi}\frac{1}{\sqrt{\bar{g}}}\left(\bar{\epsilon}^{\phi\eta\theta}\bar{r}_{\eta}\bar{\partial}_{\theta}\Psi_{nm}^{\left(\lambda\right)}+\bar{\epsilon}^{\phi\theta\eta}\bar{r}_{\theta}\bar{\partial}_{\eta}\Psi_{nm}^{\left(\lambda\right)}\right)\\
-= & \bar{g}_{\phi\phi}\frac{1}{\sqrt{\bar{g}}}\left(\bar{r}_{\eta}\bar{\partial}_{\theta}\Psi_{nm}^{\left(\lambda\right)}-\bar{r}_{\theta}\bar{\partial}_{\eta}\Psi_{nm}^{\left(\lambda\right)}\right)\\
-= & \frac{a^{2}\sinh^{2}\eta}{\left(\cosh\eta-\cos\theta\right)^{2}}\cdot\frac{\left(\cosh\eta-\cos\theta\right)^{3}}{a^{3}\sinh\eta}\cdot\left(-\frac{a^{2}}{\left(\cosh\eta-\cos\theta\right)^{2}}\right)\cdot\\
- & \quad\quad\cdot\left(\sinh\eta\cdot\cos\theta\cdot\partial_{\theta}\Psi_{nm}^{\left(\lambda\right)}-\cosh\eta\cdot\sin\theta\cdot\partial_{\eta}\Psi_{nm}^{\left(\lambda\right)}\right)\\
-= & \frac{a\cdot\sinh\eta}{\left(\cosh\eta-\cos\theta\right)}\cdot\left(\cosh\eta\cdot\sin\theta\cdot\partial_{\eta}\Psi_{nm}^{\left(\lambda\right)}-\sinh\eta\cdot\cos\theta\cdot\partial_{\theta}\Psi_{nm}^{\left(\lambda\right)}\right)
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now the main bit:
-\begin_inset Formula 
-\begin{flalign*}
-i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)= & c_{nm}^{\left(\lambda\right)}\cdot\bar{r}_{\alpha}\frac{\bar{\epsilon}^{\alpha\beta\mu}}{\sqrt{\bar{g}}}\cdot\bar{\partial}_{\beta}\left(\dots\right)_{\mu}\\
-= & c_{nm}^{\left(\lambda\right)}\cdot\Biggl[\bar{r}_{\eta}\frac{\bar{\epsilon}^{\eta\theta\phi}}{\sqrt{\bar{g}}}\cdot\partial_{\theta}\left(\dots\right)_{\phi}+\bar{r}_{\eta}\frac{\bar{\epsilon}^{\eta\phi\theta}}{\sqrt{\bar{g}}}\cdot\partial_{\phi}\left(\dots\right)_{\theta}\\
- & \quad+\bar{r}_{\theta}\frac{\bar{\epsilon}^{\theta\eta\phi}}{\sqrt{\bar{g}}}\cdot\partial_{\eta}\left(\dots\right)_{\phi}+\bar{r}_{\theta}\frac{\bar{\epsilon}^{\theta\phi\eta}}{\sqrt{\bar{g}}}\cdot\partial_{\phi}\left(\dots\right)_{\eta}\Biggr]\\
-= & c_{nm}^{\left(\lambda\right)}\cdot\frac{1}{\sqrt{\bar{g}}}\Biggl[\bar{r}_{\eta}\cdot\partial_{\theta}\left(\dots\right)_{\phi}-\bar{r}_{\eta}\cdot\partial_{\phi}\left(\dots\right)_{\theta}-\\
- & \quad-\bar{r}_{\theta}\cdot\partial_{\eta}\left(\dots\right)_{\phi}+\bar{r}_{\theta}\cdot\partial_{\phi}\left(\dots\right)_{\eta}\Biggr]\\
-= & c_{nm}^{\left(\lambda\right)}\cdot\frac{1}{\sqrt{\bar{g}}}\left[\bar{r}_{\eta}\cdot\left(\left(\dots\right)_{\phi,\theta}-im\left(\dots\right)_{\theta}\right)+\bar{r}_{\theta}\left(im\left(\dots\right)_{\eta}-\left(\dots\right)_{\phi,\eta}\right)\right]
-\end{flalign*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The expression ends up looking horrible, but it is independent of 
-\begin_inset Formula $a$
-\end_inset
-
-, which is encouraging:
-\begin_inset Formula 
-\begin{gather*}
-i\left(\vec{r}.\vec{F}-a_{nm}^{\left(\lambda\right)}\cdot r^{2}\Psi_{nm}^{\left(\lambda\right)}\right)=c_{nm}^{\left(\lambda\right)}\cdot\\
-\cdot\Biggl\{\left[\frac{\sinh2\eta\,\cos\theta\,\sin^{2}\theta}{\cosh\eta-\cos\theta}-\left(\cosh^{2}\eta-\cos^{2}\theta\right)\coth\eta\right]\cdot\partial_{\eta}\Psi_{nm}^{\left(\lambda\right)}+\\
-+\left[\frac{\cosh\eta\,\left(\sin2\theta-2\cosh\eta\,\cos^{2}\theta\,\sin\theta\right)}{\cosh\eta-\cos\theta}\right]\cdot\partial_{\theta}\Psi_{nm}^{\left(\lambda\right)}+\\
-+\left[-\cosh^{2}\eta\,\sin^{2}\theta\right]\cdot\partial_{\eta\eta}\Psi_{nm}^{\left(\lambda\right)}+\left[\sinh^{2}\eta\,\cos^{2}\theta\right]\cdot\partial_{\theta\theta}\Psi_{nm}^{\left(\lambda\right)}\Biggr\}
-\end{gather*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The second derivatives of the toroidal harmonics are also left as primitive
- functions.
 \end_layout
 
 \begin_layout Subsubsection

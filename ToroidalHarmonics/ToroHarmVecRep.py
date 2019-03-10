@@ -26,29 +26,36 @@ class ToroHarmVecRep:
     # l - type (P,Q)
     # n - legendre n
     # m - legendre m
-    # s - all the spatial values flattened into an array
+    # s - all the spatial values flattened in an array
     def __prep_contraction_tens(self):
-        #first term
         # way that divergence, angular momentum and radius. modify the toroidal harmonics
         self.divContr_Tens = (3 * self.psiTens
                               - np.sinh(self.etaTens) * np.cos(self.thetaTens) * self.D_psi_D_eta_Tens
                               - np.cosh(self.etaTens) * np.sin(self.thetaTens) * self.D_psi_D_theta_Tens)
 
-        #second term
         # the second one needs to be done in terms
-        term_eta = np.sinh(2*self.etaTens)*np.cos(self.thetaTens)*np.sin(self.thetaTens)**2/(np.cosh(self.etaTens) -
-                                                                                             np.cos(self.thetaTens)) - \
-                   (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2)*np.cosh(self.etaTens)
-        #
-        term_theta = np.cosh(self.etaTens)*(np.sin(2*self.thetaTens)-\
-                        2*np.cosh(self.etaTens)*(np.cos(self.thetaTens)**2)*np.sin(self.thetaTens))/\
-                     (np.cosh(self.etaTens) - np.cos(self.thetaTens))
 
-        self.rDotContr_Tens = term_eta * self.D_psi_D_eta_Tens + term_theta * self.D_psi_D_theta_Tens + \
-                              (-np.cosh(self.etaTens)**2 * np.sin(self.thetaTens)**2)*self.D2_psi_D_eta2_Tens + \
-                              (-np.sinh(self.etaTens)**2 * np.cos(self.thetaTens)**2)*self.D2_psi_D_theta2_Tens
+        term_eta =  (-4.0*np.cosh(self.etaTens))/(np.sinh(self.etaTens)**3) + \
+                    (np.sinh(4*self.etaTens)*np.cos(2*self.thetaTens))/(np.sinh(self.etaTens)**4)
+        #
+        term_theta = (8*np.sin(2*self.thetaTens))/(np.tanh(self.etaTens)**2)
+        #
+        term_eta_theta = (8*np.sin(2*self.thetaTens))/(np.tanh(self.etaTens))
+        #
+        term_eta2 = (-8 * np.sin(self.thetaTens)**2) / (np.tanh(self.etaTens)**2)
+        #
+        term_theta2 = (-8 * np.cos(self.thetaTens) ** 2)
+        #
+        term_phi2 = 4*(np.cos(2*self.thetaTens)-np.cosh(2*self.etaTens))/(np.sinh(self.etaTens)**4)
+
+        self.rDotContr_Tens = (1j*np.sinh(self.etaTens)**2/8.0)*(
+            term_eta * self.D_psi_D_eta_Tens + term_theta * self.D_psi_D_theta_Tens + \
+            term_eta_theta * self.D2_psi_D_eta_theta_Tens + term_eta2 * self.D2_psi_D_eta2_Tens + \
+            term_theta2 * self.D2_psi_D_theta2_Tens + term_phi2 * (1j*self.mTens)**2 * self.psiTens
+        )
 
         # third term
+
         term_0 = self.mTens**2 * (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2) / np.sinh(self.etaTens)**2
 
         term_e = np.cosh(self.etaTens) * (np.cosh(2*self.etaTens)*np.cos(2*self.thetaTens)-1) / (2*np.sinh(self.etaTens))
@@ -231,7 +238,7 @@ class ToroHarmVecRep:
         self.aCoeff_Tens = self.__find_decomposition(self.divContr_Tens, self.divFVec)
 
         # the c-term is found using the a-term
-        rDot_sol_Vec = 1j*(self.rDotFVec-np.einsum('lnm,lnms->s', self.aCoeff_Tens, self.psiTens))
+        rDot_sol_Vec = (self.rDotFVec-np.einsum('lnm,lnms->s', self.aCoeff_Tens, self.r2Tens*self.psiTens))
         self.cCoeff_Tens = self.__find_decomposition(self.rDotContr_Tens, rDot_sol_Vec)
 
         # final trerm

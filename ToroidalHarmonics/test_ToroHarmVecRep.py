@@ -278,5 +278,259 @@ class test_ToroHarmVecRep(unittest.TestCase):
         self.assertTrue(np.all(np.isclose(np.real(comp_r_curl_L_psi_second), tgt_r_curl_L_psi_second_re, rtol=rtol)))
         self.assertTrue(np.all(np.isclose(np.imag(comp_r_curl_L_psi_second), tgt_r_curl_L_psi_second_im, rtol=rtol)))
 
+    """
+    Test wether the HarmRep can get the correct amplitude from a 
+    field that only has the rPsi term
+    decomposition has to be to less sign figs simply because of the temperament of the functions
+    """
+    def test_r_psi_contribution(self, a_val=1, rtol=2e-3):
+
+        # load the datat computed by mathematica
+        col_names = ['eta', 'theta', 'phi', 'n', 'm',
+                     'div_r_psi_first_re', 'div_r_psi_first_im',
+                     'div_r_psi_second_re', 'div_r_psi_second_im',
+                     'r2_psi_first_re', 'r2_psi_first_im',
+                     'r2_psi_second_re', 'r2_psi_second_im']
+
+        iFile=1
+
+        while True: # do while
+            #
+            try:
+                validData = pd.read_csv('ToroidalHarmonicsDefinition_Convention\\rPsi_term_v%d.csv' % iFile, names=col_names)
+            except:
+                break # no such file
+
+            # load data
+            etaVec = np.array(validData['eta'])
+            thetaVec = np.array(validData['theta'])
+            phiVec = np.array(validData['phi'])
+            # only one value for n,m
+            choiceN = np.array(validData['n'][0], dtype=np.uint)
+            choiceM = np.array(validData['m'][0], dtype=np.uint)
+
+            # get cartesian versions
+            xVec, yVec, zVec = test_ToroHarmVecRep.toro_to_cart(etaVec, thetaVec, phiVec, a_val=a_val)
+
+            # extract scrambled field, it is always just one rPsi term with amplitude 1
+            # div.F
+            div_r_psi_first = np.array(validData['div_r_psi_first_re'], dtype=np.complex) + \
+                              1j*np.array(validData['div_r_psi_first_im'], dtype=np.complex)
+            div_r_psi_second = np.array(validData['div_r_psi_second_re'], dtype=np.complex) + \
+                             1j * np.array(validData['div_r_psi_second_im'], dtype=np.complex)
+            # r.F (assuming a_val=1)
+            r2_psi_first = np.array(validData['r2_psi_first_re'], dtype=np.complex) + \
+                              1j * np.array(validData['r2_psi_first_im'], dtype=np.complex)
+            r2_psi_second = np.array(validData['r2_psi_second_re'], dtype=np.complex) + \
+                              1j * np.array(validData['r2_psi_second_im'], dtype=np.complex)
+
+            # different orders of magntidue, don't mix them
 
 
+            #### first order
+            # prepare the tensors
+            toro_vec_rep_first = ToroHarmVecRep(xVec, yVec, zVec,
+                                          raw_divFTens=div_r_psi_first, raw_rDotFTens=r2_psi_first, raw_LDotFTens=0 * xVec,
+                                          nCount=choiceN+4 + 1, mCount=choiceM+4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_first.aCoeff_Tens*0
+            tgt_aCoeff_Tens[0,choiceN, choiceM]=1.0
+            tgt_bCoeff_Tens = toro_vec_rep_first.bCoeff_Tens * 0
+            tgt_cCoeff_Tens = toro_vec_rep_first.cCoeff_Tens * 0
+            self.assertTrue(np.all(np.isclose(0.0*tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.aCoeff_Tens-tgt_aCoeff_Tens), rtol=rtol, atol=rtol)))
+            self.assertTrue(np.all(np.isclose(0.0*tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol, atol=rtol)))
+            self.assertTrue(np.all(np.isclose(0.0*tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol, atol=rtol)))
+
+            #### second order
+            # prepare the tensors
+            toro_vec_rep_second = ToroHarmVecRep(xVec, yVec, zVec,
+                                                raw_divFTens=div_r_psi_second, raw_rDotFTens=r2_psi_second,
+                                                raw_LDotFTens=0 * xVec,
+                                                nCount=choiceN +4+ 1, mCount=choiceM+4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_second.aCoeff_Tens * 0
+            tgt_aCoeff_Tens[1, choiceN, choiceM] = 1.0
+            tgt_bCoeff_Tens = toro_vec_rep_second.bCoeff_Tens * 0
+            tgt_cCoeff_Tens = toro_vec_rep_second.cCoeff_Tens * 0
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.aCoeff_Tens - tgt_aCoeff_Tens), rtol=rtol, atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol, atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol, atol=rtol)))
+
+            iFile += 1
+
+    """
+        Test wether the HarmRep can get the correct amplitude from a 
+        field that only has the LPsi term
+        decomposition has to be to less sign figs simply because of the temperament of the functions
+        """
+
+    def test_L_psi_contribution(self, a_val=1, rtol=5e-5):
+
+        # load the datat computed by mathematica
+        col_names = ['eta', 'theta', 'phi', 'n', 'm',
+                     'l2_psi_first_re', 'l2_psi_first_im',
+                     'l2_psi_second_re', 'l2_psi_second_im']
+
+        iFile = 1
+
+        while True:  # do while
+            #
+            try:
+                validData = pd.read_csv('ToroidalHarmonicsDefinition_Convention\\L2Psi_term_v%d.csv' % iFile,
+                                        names=col_names)
+            except:
+                break  # no such file
+
+            # load data
+            etaVec = np.array(validData['eta'])
+            thetaVec = np.array(validData['theta'])
+            phiVec = np.array(validData['phi'])
+            # only one value for n,m
+            choiceN = np.array(validData['n'][0], dtype=np.uint)
+            choiceM = np.array(validData['m'][0], dtype=np.uint)
+
+            # get cartesian versions
+            xVec, yVec, zVec = test_ToroHarmVecRep.toro_to_cart(etaVec, thetaVec, phiVec, a_val=a_val)
+
+            # extract scrambled field, it is always just one rPsi term with amplitude 1
+            # div.F
+            l2_psi_first = np.array(validData['l2_psi_first_re'], dtype=np.complex) + \
+                              1j * np.array(validData['l2_psi_first_im'], dtype=np.complex)
+            l2_psi_second = np.array(validData['l2_psi_second_re'], dtype=np.complex) + \
+                               1j * np.array(validData['l2_psi_second_im'], dtype=np.complex)
+
+            # different orders of magntidue, don't mix them
+
+            #### first order
+            # prepare the tensors
+            toro_vec_rep_first = ToroHarmVecRep(xVec, yVec, zVec,
+                                                raw_divFTens=0 * xVec, raw_rDotFTens=0 * xVec,
+                                                raw_LDotFTens=l2_psi_first,
+                                                nCount=choiceN + 4 + 1, mCount=choiceM + 4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_first.aCoeff_Tens * 0
+            tgt_bCoeff_Tens = toro_vec_rep_first.bCoeff_Tens * 0
+            tgt_bCoeff_Tens[0, choiceN, choiceM] = 1.0
+            tgt_cCoeff_Tens = toro_vec_rep_first.cCoeff_Tens * 0
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.aCoeff_Tens - tgt_aCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+
+            #### second
+            # prepare the tensors
+            toro_vec_rep_second = ToroHarmVecRep(xVec, yVec, zVec,
+                                                raw_divFTens=0 * xVec, raw_rDotFTens=0 * xVec,
+                                                raw_LDotFTens=l2_psi_second,
+                                                nCount=choiceN + 4 + 1, mCount=choiceM + 4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_second.aCoeff_Tens * 0
+            tgt_bCoeff_Tens = toro_vec_rep_second.bCoeff_Tens * 0
+            tgt_bCoeff_Tens[1, choiceN, choiceM] = 1.0
+            tgt_cCoeff_Tens = toro_vec_rep_second.cCoeff_Tens * 0
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.aCoeff_Tens - tgt_aCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+
+            iFile += 1
+
+    """
+           Test wether the HarmRep can get the correct amplitude from a 
+           field that only has the curlLPsi term
+           decomposition has to be to less sign figs simply because of the temperament of the functions
+           """
+
+    def test_curlL_psi_contribution(self, a_val=1, rtol=2e-6):
+
+        # load the datat computed by mathematica
+        col_names = ['eta', 'theta', 'phi', 'n', 'm',
+                     'rCurlL_psi_first_re', 'rCurlL_psi_first_im',
+                     'rCurlL_psi_second_re', 'rCurlL_psi_second_im']
+
+        iFile = 1
+
+        while True:  # do while
+            #
+            try:
+                validData = pd.read_csv('ToroidalHarmonicsDefinition_Convention\\rCurlLPsi_term_v%d.csv' % iFile,
+                                        names=col_names)
+            except:
+                break  # no such file
+
+            # load data
+            etaVec = np.array(validData['eta'])
+            thetaVec = np.array(validData['theta'])
+            phiVec = np.array(validData['phi'])
+            # only one value for n,m
+            choiceN = np.array(validData['n'][0], dtype=np.uint)
+            choiceM = np.array(validData['m'][0], dtype=np.uint)
+
+            # get cartesian versions
+            xVec, yVec, zVec = test_ToroHarmVecRep.toro_to_cart(etaVec, thetaVec, phiVec, a_val=a_val)
+
+            # extract scrambled field, it is always just one rPsi term with amplitude 1
+            #
+            rCurlL_psi_first = np.array(validData['rCurlL_psi_first_re'], dtype=np.complex) + \
+                           1j * np.array(validData['rCurlL_psi_first_im'], dtype=np.complex)
+            rCurlL_psi_second = np.array(validData['rCurlL_psi_second_re'], dtype=np.complex) + \
+                            1j * np.array(validData['rCurlL_psi_second_im'], dtype=np.complex)
+
+            # different orders of magntidue, don't mix them
+
+            #### first order
+            # prepare the tensors
+            toro_vec_rep_first = ToroHarmVecRep(xVec, yVec, zVec,
+                                                raw_divFTens=0 * xVec, raw_rDotFTens=rCurlL_psi_first,
+                                                raw_LDotFTens=0 * xVec,
+                                                nCount=choiceN + 4 + 1, mCount=choiceM + 4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_first.aCoeff_Tens * 0
+            tgt_bCoeff_Tens = toro_vec_rep_first.bCoeff_Tens * 0
+            tgt_cCoeff_Tens = toro_vec_rep_first.cCoeff_Tens * 0
+            tgt_cCoeff_Tens[0, choiceN, choiceM] = 1.0
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.aCoeff_Tens - tgt_aCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_first.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+
+            #### second
+            # prepare the tensors
+            toro_vec_rep_second = ToroHarmVecRep(xVec, yVec, zVec,
+                                                raw_divFTens=0 * xVec, raw_rDotFTens=rCurlL_psi_second,
+                                                raw_LDotFTens=0 * xVec,
+                                                nCount=choiceN + 4 + 1, mCount=choiceM + 4 + 1)
+
+            tgt_aCoeff_Tens = toro_vec_rep_second.aCoeff_Tens * 0
+            tgt_bCoeff_Tens = toro_vec_rep_second.bCoeff_Tens * 0
+            tgt_cCoeff_Tens = toro_vec_rep_second.cCoeff_Tens * 0
+            tgt_cCoeff_Tens[1, choiceN, choiceM] = 1.0
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.aCoeff_Tens - tgt_aCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.bCoeff_Tens - tgt_bCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+            self.assertTrue(np.all(
+                np.isclose(0.0 * tgt_aCoeff_Tens, np.abs(toro_vec_rep_second.cCoeff_Tens - tgt_cCoeff_Tens), rtol=rtol,
+                           atol=rtol)))
+
+            iFile+=1

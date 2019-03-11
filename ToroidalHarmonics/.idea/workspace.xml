@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eb49b70-e063-4fa9-bb28-a6114fe41678" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ToroHarmVecRep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/CheckContractionTens.nb" beforeDir="false" afterPath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/CheckContractionTens.nb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/Toroidal_Harmonics_Def2.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/ToroidalHarmonicsDefinition_Convention/Toroidal_Harmonics_Def2.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_ToroHarmVecRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ToroHarmVecRep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toroidal_Harmonics_Def.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,33 +10,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1479353185">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
+            <state relative-caret-position="285">
               <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
               <folding>
                 <element signature="e#171#189#0" expanded="true" />
@@ -50,9 +25,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1739">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="2442">
               <caret line="114" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="e#66#84#0" expanded="true" />
@@ -64,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="132">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
@@ -123,17 +107,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ToroidalHarmonics" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToroidalHarmonics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToroidalHarmonics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToroidalHarmonics" type="462c0819:PsiDirectoryNode" />
-              <item name="ToroidalHarmonicsDefinition_Convention" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToroidalHarmonics" type="b2602c69:ProjectViewProjectNode" />
@@ -152,7 +132,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,10 +245,10 @@
     </configuration>
     <list>
       <item itemvalue="Python.testToroHarmVecRep" />
-      <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" />
-      <item itemvalue="Python tests.pytest in test_ToroHarmVecRep.py" />
       <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_conraction_tens_div_rPsi" />
       <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_conraction_tens_r_dot_curl_L_Psi" />
+      <item itemvalue="Python tests.pytest for test_ToroHarmVecRep.test_ToroHarmVecRep.test_toro_coord" />
+      <item itemvalue="Python tests.pytest in test_ToroHarmVecRep.py" />
     </list>
     <recent_temporary>
       <list>
@@ -329,8 +308,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49460918" visible="true" weight="0.17617238" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5053908" side_tool="true" visible="true" weight="0.17617238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49394348" visible="true" weight="0.17617238" />
+      <window_info id="Structure" order="1" sideWeight="0.50605655" side_tool="true" visible="true" weight="0.17617238" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -586,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testToroCoords.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -607,16 +579,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="2442">
           <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="e#66#84#0" expanded="true" />
@@ -624,9 +589,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_ToroHarmVecRep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToroCoords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1739">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ToroHarmVecRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
+        <state relative-caret-position="285">
           <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
           <folding>
             <element signature="e#171#189#0" expanded="true" />

@@ -238,5 +238,45 @@ class test_ToroHarmVecRep(unittest.TestCase):
         self.assertTrue(np.all(np.isclose(np.real(comp_div_rPsi_second), tgt_div_rPsi_second_re, rtol=rtol)))
         self.assertTrue(np.all(np.isclose(np.imag(comp_div_rPsi_second), tgt_div_rPsi_second_im, rtol=rtol)))
 
+    def test_conraction_tens_r_dot_curl_L_Psi(self, a_val=1.0, rtol=1e-6):
+        # load the datat computed by mathematica
+        col_names = ['eta', 'theta', 'phi', 'n', 'm',
+                     'r_curl_L_psi_first_re', 'r_curl_L_psi_first_im',
+                     'r_curl_L_psi_second_re', 'r_curl_L_psi_second_im']
+        #
+        validData = pd.read_csv('ToroidalHarmonicsDefinition_Convention\\contrTens_rCurlL_psi.csv', names=col_names)
+
+        # load data
+        etaVec = np.array(validData['eta'])
+        thetaVec = np.array(validData['theta'])
+        phiVec = np.array(validData['phi'])
+
+        nVec = np.array(validData['n'], dtype=np.uint)
+        mVec = np.array(validData['m'], dtype=np.uint)
+
+        # get cartesian versions
+        xVec, yVec, zVec = test_ToroHarmVecRep.toro_to_cart(etaVec, thetaVec, phiVec, a_val=a_val)
+
+        # prepare the tensors
+        toro_vec_rep = ToroHarmVecRep(xVec, yVec, zVec, 0 * xVec, 0 * xVec, 0 * xVec, nCount=np.max(nVec) + 1,
+                                      mCount=np.max(mVec) + 1)
+
+        # now compare the psi_tensor
+        # computed by Python
+        comp_r_curl_L_psi_first = np.array(
+            [toro_vec_rep.rDotContr_Tens[0, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        comp_r_curl_L_psi_second = np.array(
+            [toro_vec_rep.rDotContr_Tens[1, nVec[iCell], mVec[iCell], iCell] for iCell in range(len(xVec))])
+        # tagret
+        tgt_r_curl_L_psi_first_re = np.array(validData['r_curl_L_psi_first_re'])
+        tgt_r_curl_L_psi_first_im = np.array(validData['r_curl_L_psi_first_im'])
+        tgt_r_curl_L_psi_second_re = np.array(validData['r_curl_L_psi_second_re'])
+        tgt_r_curl_L_psi_second_im = np.array(validData['r_curl_L_psi_second_im'])
+        #
+        self.assertTrue(np.all(np.isclose(np.real(comp_r_curl_L_psi_first), tgt_r_curl_L_psi_first_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_r_curl_L_psi_first), tgt_r_curl_L_psi_first_im, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.real(comp_r_curl_L_psi_second), tgt_r_curl_L_psi_second_re, rtol=rtol)))
+        self.assertTrue(np.all(np.isclose(np.imag(comp_r_curl_L_psi_second), tgt_r_curl_L_psi_second_im, rtol=rtol)))
+
 
 

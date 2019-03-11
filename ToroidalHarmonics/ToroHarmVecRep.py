@@ -29,12 +29,13 @@ class ToroHarmVecRep:
     # s - all the spatial values flattened in an array
     def __prep_contraction_tens(self):
         # way that divergence, angular momentum and radius. modify the toroidal harmonics
+        # div(r Psi)
         self.divContr_Tens = (3 * self.psiTens
                               - np.sinh(self.etaTens) * np.cos(self.thetaTens) * self.D_psi_D_eta_Tens
                               - np.cosh(self.etaTens) * np.sin(self.thetaTens) * self.D_psi_D_theta_Tens)
 
         # the second one needs to be done in terms
-
+        # r.curl(L Psi)
         term_eta =  (-4.0*np.cosh(self.etaTens))/(np.sinh(self.etaTens)**3) + \
                     (np.sinh(4*self.etaTens)*np.cos(2*self.thetaTens))/(np.sinh(self.etaTens)**4)
         #
@@ -54,23 +55,8 @@ class ToroHarmVecRep:
             term_theta2 * self.D2_psi_D_theta2_Tens + term_phi2 * (1j*self.mTens)**2 * self.psiTens
         )
 
-        # third term
-
-        term_0 = self.mTens**2 * (np.cosh(self.etaTens)**2 - np.cos(self.thetaTens)**2) / np.sinh(self.etaTens)**2
-
-        term_e = np.cosh(self.etaTens) * (np.cosh(2*self.etaTens)*np.cos(2*self.thetaTens)-1) / (2*np.sinh(self.etaTens))
-
-        term_t = np.cosh(self.etaTens)**2 * np.sin(2*self.thetaTens)
-
-        term_et = 0.5 * np.sinh(2*self.etaTens)*np.sin(2*self.thetaTens)
-
-        term_ee = -np.cosh(self.etaTens)**2 * np.sin(self.thetaTens)**2
-
-        term_tt = -np.sinh(self.etaTens)**2 * np.cos(self.thetaTens)**2
-
-        self.LdotContr_Tens = term_0 * self.psiTens + term_e * self.D_psi_D_eta_Tens + term_t * self.D_psi_D_theta_Tens + \
-            term_ee * self.D2_psi_D_eta2_Tens + term_et * self.D2_psi_D_eta_theta_Tens + term_tt * self.D2_psi_D_theta2_Tens
-
+        # third term is not needed since the b-coeff can be extracted
+        # using the rDotContr_Tens, i.e. r.curl(L Psi) tensor
 
     # get the legendre polynomials and build all the necessary psi and related tensors that will be needed for further
     # computation
@@ -242,4 +228,6 @@ class ToroHarmVecRep:
         self.cCoeff_Tens = self.__find_decomposition(self.rDotContr_Tens, rDot_sol_Vec)
 
         # final trerm
-        self.bCoeff_Tens = self.__find_decomposition(self.LdotContr_Tens, self.LDotFVec)
+        # note that it can actually be obtained using
+        # the same contraction tensor as for the c-term
+        self.bCoeff_Tens = self.__find_decomposition(self.rDotContr_Tens, 1j*self.LDotFVec)

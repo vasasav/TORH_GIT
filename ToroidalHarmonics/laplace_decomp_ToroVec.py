@@ -108,6 +108,37 @@ pl.yticks(np.arange(0, toroHarmVec.bCoeff_Tens.shape[1], tickStep))
 pl.xticks(np.arange(0, toroHarmVec.bCoeff_Tens.shape[2], tickStep))
 #pl.title('$\\left|c^{(2)}\\right|$')
 
+## now do it for normalized values
+# value of the harmonic (mean) and the coefficient
+first_norm = np.abs(np.squeeze(toroHarmVec.bCoeff_Tens[0,:,:]*np.median(toroHarmVec.psiTens[0,:,:,:], axis=2)))
+# value of the harmonic (mean) and the coefficient
+second_norm = np.abs(np.squeeze(toroHarmVec.bCoeff_Tens[1,:,:]*np.median(toroHarmVec.psiTens[1,:,:,:], axis=2)))
+
+norm_max_val=10*np.log10(np.max( [np.max( first_norm ), np.max( second_norm )]))
+norm_norm = mpc.Normalize(vmin=norm_max_val-60, vmax=norm_max_val)
+
+pl.figure(2)
+###
+pl.subplot(211)
+# pl.imshow(10*np.log10( first_norm ), norm=norm_norm, cmap=pl.cm.hot)
+pl.imshow( first_norm, cmap=pl.cm.hot)
+pl.colorbar().set_label('lin')
+pl.xlabel('m - order')
+pl.ylabel('n - order')
+pl.yticks(np.arange(0, toroHarmVec.cCoeff_Tens.shape[1], tickStep))
+pl.xticks(np.arange(0, toroHarmVec.cCoeff_Tens.shape[2], tickStep))
+#pl.title('$\\left|b^{(1)}\\right|$')
+###
+pl.subplot(212)
+# pl.imshow(10 * np.log10(second_norm), norm=norm_norm, cmap=pl.cm.hot)
+pl.imshow( second_norm, cmap=pl.cm.hot)
+pl.colorbar().set_label('lin')
+pl.xlabel('m - order')
+pl.ylabel('n - order')
+pl.yticks(np.arange(0, toroHarmVec.cCoeff_Tens.shape[1], tickStep))
+pl.xticks(np.arange(0, toroHarmVec.cCoeff_Tens.shape[2], tickStep))
+#pl.title('$\\left|b^{(2)}\\right|$')
+
 
 pl.figure(3)
 #ratioTens_max_val=10*np.log10(np.max(harmRatioMean))

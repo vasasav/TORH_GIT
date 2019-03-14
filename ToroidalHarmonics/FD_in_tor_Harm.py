@@ -12,7 +12,7 @@ import matplotlib.colors as mpc
 # load the datat computed by mathematica
 col_names = ['X', 'Y', 'Z', 'q1', 'q2',
              'r_dot_E', 'L_dot_E_im', 'r_dot_B', 'L_dot_B_im']
-fdData = pd.read_csv('FD_numData_q1.csv', names=col_names)
+fdData = pd.read_csv('FD_numData_10q1.csv', names=col_names)
 
 # prep data
 X = np.array(fdData['X'])
@@ -85,6 +85,36 @@ pl.ylabel('n - order')
 pl.yticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[1], tickStep))
 pl.xticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[2], tickStep))
 #pl.title('$\\left|c^{(2)}\\right|$')
+
+## now do it for normalized values
+# value of the harmonic (mean) and the coefficient
+first_norm = np.abs(np.squeeze(fdToroHarmVecRep.cCoeff_Tens[0,:,:]*np.median(fdToroHarmVecRep.psiTens[0,:,:,:], axis=2)))
+# value of the harmonic (mean) and the coefficient
+second_norm = np.abs(np.squeeze(fdToroHarmVecRep.cCoeff_Tens[1,:,:]*np.median(fdToroHarmVecRep.psiTens[1,:,:,:], axis=2)))
+
+norm_max_val=10*np.log10(np.max( [np.max( first_norm ), np.max( second_norm )]))
+norm_norm = mpc.Normalize(vmin=norm_max_val-30, vmax=norm_max_val)
+
+pl.figure(2)
+###
+pl.subplot(211)
+pl.imshow(10*np.log10( first_norm ), norm=norm_norm, cmap=pl.cm.hot)
+pl.colorbar().set_label(' (dB)')
+pl.xlabel('m - order')
+pl.ylabel('n - order')
+pl.yticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[1], tickStep))
+pl.xticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[2], tickStep))
+#pl.title('$\\left|b^{(1)}\\right|$')
+###
+pl.subplot(212)
+pl.imshow(10 * np.log10(second_norm), norm=norm_norm, cmap=pl.cm.hot)
+pl.colorbar().set_label(' (dB)')
+pl.xlabel('m - order')
+pl.ylabel('n - order')
+pl.yticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[1], tickStep))
+pl.xticks(np.arange(0, fdToroHarmVecRep.cCoeff_Tens.shape[2], tickStep))
+#pl.title('$\\left|b^{(2)}\\right|$')
+
 
 ### what is the difference between the first and second kind harmonics for the specified range
 ratioTens = np.abs(np.squeeze(fdToroHarmVecRep.psiTens[0,:,:,:]/fdToroHarmVecRep.psiTens[1,:,:,:]))

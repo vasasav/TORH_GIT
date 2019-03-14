@@ -30,7 +30,7 @@ fdToroHarmVecRep = ToroHarmVecRep(X, Y, Z,
                                     raw_divFTens=0*X,
                                     raw_rDotFTens=r_dot_E,
                                     raw_LDotFTens=L_dot_E,
-                                    nCount=10, mCount=10)
+                                    nCount=15, mCount=19)
 
 ########### display
 aCoeff_max_val=10*np.log10(np.max( np.abs(fdToroHarmVecRep.aCoeff_Tens) ))

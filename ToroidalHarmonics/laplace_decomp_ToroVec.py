@@ -47,6 +47,11 @@ toroHarmVec = ToroHarmVecRep(xCleanVec, yCleanVec, zCleanVec,
                              raw_divFTens = 0*xCleanVec, raw_rDotFTens=0*xCleanVec,
                              raw_LDotFTens=L_dot_F_CleanVec, nCount=20, mCount=35)
 
+### what is the difference between the first and second kind harmonics for the specified range
+ratioTens = np.abs(np.squeeze(toroHarmVec.psiTens[0,:,:,:]/toroHarmVec.psiTens[1,:,:,:]))
+harmRatioMean = np.mean(ratioTens, axis=2)*np.squeeze(np.abs(toroHarmVec.bCoeff_Tens[0,:,:]/toroHarmVec.bCoeff_Tens[1,:,:]))
+harmRatioMedian = np.median(ratioTens, axis=2)
+
 ############# now plot
 
 #
@@ -104,5 +109,16 @@ pl.xticks(np.arange(0, toroHarmVec.bCoeff_Tens.shape[2], tickStep))
 #pl.title('$\\left|c^{(2)}\\right|$')
 
 
+pl.figure(3)
+#ratioTens_max_val=10*np.log10(np.max(harmRatioMean))
+ratioTens_norm = mpc.Normalize(vmin=-60, vmax=20)
+###
+pl.imshow(10*np.log10(harmRatioMean), norm=ratioTens_norm, cmap=pl.cm.hot)
+pl.colorbar().set_label(' (dB)')
+pl.xlabel('m - order')
+pl.ylabel('n - order')
+pl.yticks(np.arange(0, toroHarmVec.bCoeff_Tens.shape[1], tickStep))
+pl.xticks(np.arange(0, toroHarmVec.bCoeff_Tens.shape[2], tickStep))
+pl.title('$P/Q$')
 
 pl.show()

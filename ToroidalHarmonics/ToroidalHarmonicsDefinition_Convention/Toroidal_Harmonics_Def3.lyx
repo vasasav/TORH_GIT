@@ -458,13 +458,53 @@ Now let
 \end_inset
 
  coefficients can be only non-negative.
- Consider:
+ As one can see from Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NegativeM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NegativeN"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) the values of 
+\begin_inset Formula $P\&Q$
+\end_inset
+
+ for negative parameters are not linearly independent.
+ So it makes no sense to treat them as additional degrees of freedom.
+ I therefore suggest to compute 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $Q$
+\end_inset
+
+ as follows:
 \begin_inset Formula 
 \begin{flalign*}
-\cos n\theta_{r}= & \frac{1}{2}\left(\exp\left(in\theta_{r}\right)+\exp\left(-in\theta_{r}\right)\right)\\
-= & \frac{1}{2}\left(\exp\left(in\left[\frac{2\pi}{N}\cdot r-\pi\right]\right)+\exp\left(-in\left[\frac{2\pi}{N}\cdot r-\pi\right]\right)\right)\\
-= & \frac{\left(-1\right)^{n}}{2}\left(\exp\left(i\frac{2\pi}{N}\cdot r\cdot n\right)+\exp\left(-i\frac{2\pi}{N}\cdot r\cdot n\right)\right)\\
-= & \frac{\left(-1\right)^{n}}{2}\left(\exp\left(i\frac{2\pi}{N}\cdot r\cdot n\right)+\exp\left(i\frac{2\pi}{N}\cdot\left(N-r\right)\cdot n\right)\right)
+P_{n-\frac{1}{2}}^{m}= & \begin{cases}
+P_{n-\frac{1}{2}}^{m}, & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor ,\:n\le\left\lfloor \frac{N}{2}\right\rfloor \\
+P_{\left(N-n\right)-\frac{1}{2}}^{m} & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor ,\:n>\left\lfloor \frac{N}{2}\right\rfloor \\
+\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{n-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor ,\:n\le\left\lfloor \frac{N}{2}\right\rfloor \\
+\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{\left(N-n\right)-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor ,\:n>\left\lfloor \frac{N}{2}\right\rfloor 
+\end{cases}
 \end{flalign*}
 
 \end_inset
@@ -473,17 +513,18 @@ Now let
 \end_layout
 
 \begin_layout Standard
-and similarly for 
-\begin_inset Formula $\phi$
-\end_inset
-
-, thus on a finite domain it is sufficent to consider just positive indices:
- 
+With this I can restrict myself to just the positive values of 
 \begin_inset Formula $n,m=0,\,1,\,\dots$
 \end_inset
 
 .
- Moving on, and converting the integrals to sums:
+ The way it will be handeled in code is by definition of an additional folding
+ function.
+ 
+\end_layout
+
+\begin_layout Standard
+Moving on, and converting the integrals to sums:
 \end_layout
 
 \begin_layout Standard

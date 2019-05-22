@@ -119,13 +119,228 @@ literal "true"
  suggest defining the general solution to the Laplace equations as:
 \begin_inset Formula 
 \begin{gather*}
-\Phi=f\left(\mu,\,\eta\right)\sum_{n,m=-\infty}^{\infty}\left[C_{mn}P_{n-\frac{1}{2}}^{m}\left(\cosh\mu\right)+D_{mn}Q_{n-\frac{1}{2}}^{m}\left(\cosh\mu\right)\right]\exp\left(in\eta\right)\exp\left(im\phi\right)\\
+\Phi=f\left(\mu,\,\eta\right)\sum_{n,m=-\infty}^{\infty}\left[C_{mn}P_{n-\frac{1}{2}}^{m}\left(\cosh\mu\right)+D_{mn}Q_{n-\frac{1}{2}}^{m}\left(\cosh\mu\right)\right]\exp\left(in\theta\right)\exp\left(im\phi\right)\\
 f\left(\mu,\,\eta\right)=\sqrt{\cosh\mu-\cos\eta}
 \end{gather*}
 
 \end_inset
 
-I will therefore define toroidal harmonics as:
+
+\end_layout
+
+\begin_layout Subsection
+Sign of 
+\begin_inset Formula $n,\,m$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+From DLMF
+\begin_inset space ~
+\end_inset
+
+14.9.3 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DLMF"
+literal "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{\nu}^{-m}=\left(-1\right)^{m}\,\frac{\Gamma\left(\nu-m+1\right)}{\Gamma\left(\nu+m+1\right)}\,\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{\nu}^{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that here 
+\begin_inset Formula $\nu\in\mathbb{R}$
+\end_inset
+
+, so it applies for our case.
+ Mathematica confirms this for our functions.
+ It follows that for 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $-m$
+\end_inset
+
+ the 
+\begin_inset Formula $P\&Q$
+\end_inset
+
+ are essentially equal up to standard normalization factor.
+ In our case:
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{n-\frac{1}{2}}^{-m}=\left(-1\right)^{m}\,\frac{\Gamma\left(n-\frac{1}{2}-m+1\right)}{\Gamma\left(n-\frac{1}{2}+m+1\right)}\,\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{n-\frac{1}{2}}^{m}=\left(-1\right)^{m}\,\frac{\Gamma\left(n-m+\frac{1}{2}\right)}{\Gamma\left(n+m+\frac{1}{2}\right)}\,\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{n-\frac{1}{2}}^{m}\label{eq:NegativeM}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From DLMF
+\begin_inset space ~
+\end_inset
+
+14.9.5 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DLMF"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{-\nu-1}^{\mu}=P_{\nu}^{\mu}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It follows that:
+\begin_inset Formula 
+\[
+P_{-n-\frac{1}{2}}^{m}=P_{-\left(n-\frac{1}{2}\right)-1}^{m}=P_{n-\frac{1}{2}}^{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mathematica agrees.
+ 
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $Q$
+\end_inset
+
+ we have DLMF
+\begin_inset space ~
+\end_inset
+
+14.9.6:
+\begin_inset Formula 
+\begin{gather*}
+\pi\cos\left(\nu\pi\right)\cos\left(\mu\pi\right)P_{\nu}^{\mu}=\sin\left(\left(\nu+\mu\right)\pi\right)Q_{\nu}^{\mu}-\sin\left(\left(\nu-\mu\right)\pi\right)Q_{-\nu-1}^{\mu}\\
+\pi\cos\left(\left(n-\frac{1}{2}\right)\pi\right)\cos\left(m\pi\right)P_{n-\frac{1}{2}}^{m}=\sin\left(\left(n+m-\frac{1}{2}\right)\pi\right)Q_{n-\frac{1}{2}}^{m}-\sin\left(\left(n-m-\frac{1}{2}\right)\pi\right)Q_{-n-\frac{1}{2}}^{m}\\
+0=\left(-1\right)^{n+m-1}Q_{n-\frac{1}{2}}^{m}-\left(-1\right)^{n-m-1}Q_{-n-\frac{1}{2}}^{m}\\
+Q_{-n-\frac{1}{2}}^{m}=\left(-1\right)^{2m}Q_{n-\frac{1}{2}}^{m}=Q_{n-\frac{1}{2}}^{m}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, Mathematica agrees.
+ So:
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{-n-\frac{1}{2}}^{m}=\left\{ \begin{array}{c}
+P\\
+Q
+\end{array}\right\} _{n-\frac{1}{2}}^{m}\label{eq:NegativeN}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note also that by definition, 
+\begin_inset Formula $P\&Q$
+\end_inset
+
+ are solutions of:
+\begin_inset Formula 
+\[
+\left(1-x^{2}\right)\frac{d^{2}P}{dx^{2}}-2x\frac{dP}{dx}+\nu\left(\nu+1\right)P=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which in the case of 
+\begin_inset Formula $\nu=n-\frac{1}{2}$
+\end_inset
+
+ becomes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(1-x^{2}\right)\frac{d^{2}P_{n-\frac{1}{2}}^{m}}{dx^{2}}-2x\frac{dP_{n-\frac{1}{2}}^{m}}{dx}+\left(n^{2}+\frac{1}{4}\right)P_{n-\frac{1}{2}}^{m}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the sign of 
+\begin_inset Formula $n$
+\end_inset
+
+ is arbitrary, it does not change the equation.
+\end_layout
+
+\begin_layout Subsection
+Definition
+\end_layout
+
+\begin_layout Standard
+It makes sense to define toroidal harmonics as:
 \begin_inset Formula 
 \begin{equation}
 \Psi_{nm}^{\left(1,2\right)}\left(\eta,\,\theta,\,\phi\right)=\left\{ \begin{array}{c}
@@ -149,12 +364,40 @@ Where:
 0 & \le\eta< & \infty\\
 -\pi & <\theta\le & \pi\\
 0 & \le\phi< & 2\pi\\
- & m,n=0,1,\dots
+ & m,n=0,\pm1,\pm2,\dots
 \end{alignat*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Using Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NegativeM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NegativeN"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to change sign.
 \end_layout
 
 \begin_layout Section

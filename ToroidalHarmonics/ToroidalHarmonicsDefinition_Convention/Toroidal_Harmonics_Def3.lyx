@@ -500,10 +500,10 @@ noprefix "false"
 \begin_inset Formula 
 \begin{flalign*}
 P_{n-\frac{1}{2}}^{m}= & \begin{cases}
-P_{n-\frac{1}{2}}^{m}, & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor ,\:n\le\left\lfloor \frac{N}{2}\right\rfloor \\
-P_{\left(N-n\right)-\frac{1}{2}}^{m} & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor ,\:n>\left\lfloor \frac{N}{2}\right\rfloor \\
-\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{n-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor ,\:n\le\left\lfloor \frac{N}{2}\right\rfloor \\
-\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{\left(N-n\right)-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor ,\:n>\left\lfloor \frac{N}{2}\right\rfloor 
+P_{n-\frac{1}{2}}^{m}, & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor +1,\:n\le\left\lfloor \frac{N}{2}\right\rfloor +1\\
+P_{\left(N-n\right)-\frac{1}{2}}^{m} & \text{for\,}m\le\left\lfloor \frac{M}{2}\right\rfloor +1,\:n>\left\lfloor \frac{N}{2}\right\rfloor +1\\
+\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{n-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor +1,\:n\le\left\lfloor \frac{N}{2}\right\rfloor +1\\
+\left(-1\right)^{\left(M-m\right)}\,\frac{\Gamma\left(n-\left(M-m\right)+\frac{1}{2}\right)}{\Gamma\left(n+\left(M-m\right)+\frac{1}{2}\right)}P_{\left(N-n\right)-\frac{1}{2}}^{M-m}, & \text{for\,}m>\left\lfloor \frac{M}{2}\right\rfloor +1,\:n>\left\lfloor \frac{N}{2}\right\rfloor +1
 \end{cases}
 \end{flalign*}
 
@@ -514,7 +514,11 @@ P_{\left(N-n\right)-\frac{1}{2}}^{m} & \text{for\,}m\le\left\lfloor \frac{M}{2}\
 
 \begin_layout Standard
 With this I can restrict myself to just the positive values of 
-\begin_inset Formula $n,m=0,\,1,\,\dots$
+\begin_inset Formula $n=0,\,1,\,\dots N-1$
+\end_inset
+
+ and 
+\begin_inset Formula $m=0,\dots M-1$
 \end_inset
 
 .

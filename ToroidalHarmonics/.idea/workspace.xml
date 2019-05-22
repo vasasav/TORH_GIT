@@ -118,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_TorHarmRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="400">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#85#100#0" expanded="true" />
@@ -127,19 +127,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TorHarmRep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
+            <state relative-caret-position="624">
               <caret line="72" column="85" selection-start-line="72" selection-start-column="85" selection-end-line="72" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DTORH.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="513">
               <caret line="162" column="74" selection-start-line="162" selection-start-column="74" selection-end-line="162" selection-end-column="74" />
               <folding>
                 <element signature="e#113#132#0" expanded="true" />
@@ -199,8 +199,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1675" />
-    <option name="y" value="285" />
+    <option name="x" value="-41" />
+    <option name="y" value="313" />
     <option name="width" value="1936" />
     <option name="height" value="1047" />
   </component>
@@ -443,10 +443,11 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48264644" visible="true" weight="0.21654373" />
-      <window_info id="Structure" order="1" sideWeight="0.5173536" side_tool="true" visible="true" weight="0.21654373" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4815618" visible="true" weight="0.21654373" />
+      <window_info id="Structure" order="1" sideWeight="0.51843816" side_tool="true" visible="true" weight="0.21654373" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
